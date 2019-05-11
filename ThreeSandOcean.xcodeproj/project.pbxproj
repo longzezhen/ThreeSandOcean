@@ -15,6 +15,7 @@
 		BF4CDC442286D3DA00178BB8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BF4CDC432286D3DA00178BB8 /* main.m */; };
 		BF4CDC4E2286D3DA00178BB8 /* ThreeSandOceanTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BF4CDC4D2286D3DA00178BB8 /* ThreeSandOceanTests.m */; };
 		BF4CDC592286D3DA00178BB8 /* ThreeSandOceanUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BF4CDC582286D3DA00178BB8 /* ThreeSandOceanUITests.m */; };
+		D5EBA5DDF5A51EAB18F071CD /* libPods-ThreeSandOcean.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FA82C7D5427BEBFFA888139 /* libPods-ThreeSandOcean.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		02094F273CD0C2396BA247F8 /* Pods-ThreeSandOcean.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThreeSandOcean.debug.xcconfig"; path = "Target Support Files/Pods-ThreeSandOcean/Pods-ThreeSandOcean.debug.xcconfig"; sourceTree = "<group>"; };
+		7FA82C7D5427BEBFFA888139 /* libPods-ThreeSandOcean.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ThreeSandOcean.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF4CDC312286D3D800178BB8 /* ThreeSandOcean.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThreeSandOcean.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF4CDC342286D3D800178BB8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BF4CDC352286D3D800178BB8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -51,6 +54,7 @@
 		BF4CDC542286D3DA00178BB8 /* ThreeSandOceanUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThreeSandOceanUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF4CDC582286D3DA00178BB8 /* ThreeSandOceanUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThreeSandOceanUITests.m; sourceTree = "<group>"; };
 		BF4CDC5A2286D3DA00178BB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E9F4658823746F7C218C944F /* Pods-ThreeSandOcean.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThreeSandOcean.release.xcconfig"; path = "Target Support Files/Pods-ThreeSandOcean/Pods-ThreeSandOcean.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5EBA5DDF5A51EAB18F071CD /* libPods-ThreeSandOcean.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +83,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1202EE958DE9617859EB7ABA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				02094F273CD0C2396BA247F8 /* Pods-ThreeSandOcean.debug.xcconfig */,
+				E9F4658823746F7C218C944F /* Pods-ThreeSandOcean.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		71C62828338AA1EDD98C120B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7FA82C7D5427BEBFFA888139 /* libPods-ThreeSandOcean.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BF4CDC282286D3D800178BB8 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +108,8 @@
 				BF4CDC4C2286D3DA00178BB8 /* ThreeSandOceanTests */,
 				BF4CDC572286D3DA00178BB8 /* ThreeSandOceanUITests */,
 				BF4CDC322286D3D800178BB8 /* Products */,
+				1202EE958DE9617859EB7ABA /* Pods */,
+				71C62828338AA1EDD98C120B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -139,9 +164,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BF4CDC5D2286D3DA00178BB8 /* Build configuration list for PBXNativeTarget "ThreeSandOcean" */;
 			buildPhases = (
+				B6D280B2544F8C1F67C82F9A /* [CP] Check Pods Manifest.lock */,
 				BF4CDC2D2286D3D800178BB8 /* Sources */,
 				BF4CDC2E2286D3D800178BB8 /* Frameworks */,
 				BF4CDC2F2286D3D800178BB8 /* Resources */,
+				00749A3D8FC6B303E33DF740 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -256,6 +283,53 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		00749A3D8FC6B303E33DF740 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ThreeSandOcean/Pods-ThreeSandOcean-resources.sh",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ThreeSandOcean/Pods-ThreeSandOcean-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B6D280B2544F8C1F67C82F9A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ThreeSandOcean-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BF4CDC2D2286D3D800178BB8 /* Sources */ = {
@@ -433,6 +507,7 @@
 		};
 		BF4CDC5E2286D3DA00178BB8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 02094F273CD0C2396BA247F8 /* Pods-ThreeSandOcean.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -450,6 +525,7 @@
 		};
 		BF4CDC5F2286D3DA00178BB8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E9F4658823746F7C218C944F /* Pods-ThreeSandOcean.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
