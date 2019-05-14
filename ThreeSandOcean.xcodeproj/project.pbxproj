@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF0231DA228911640017DAC0 /* NSString+category.m in Sources */ = {isa = PBXBuildFile; fileRef = BF0231D6228911640017DAC0 /* NSString+category.m */; };
+		BF0231DB228911640017DAC0 /* MYTools.m in Sources */ = {isa = PBXBuildFile; fileRef = BF0231D8228911640017DAC0 /* MYTools.m */; };
+		BF0231E2228926A00017DAC0 /* NSDate+category.m in Sources */ = {isa = PBXBuildFile; fileRef = BF0231E1228926A00017DAC0 /* NSDate+category.m */; };
+		BF0231E5228971790017DAC0 /* UIImage+category.m in Sources */ = {isa = PBXBuildFile; fileRef = BF0231E4228971790017DAC0 /* UIImage+category.m */; };
 		BF4CDC362286D3D800178BB8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BF4CDC352286D3D800178BB8 /* AppDelegate.m */; };
 		BF4CDC392286D3D800178BB8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF4CDC382286D3D800178BB8 /* ViewController.m */; };
 		BF4CDC3C2286D3D800178BB8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF4CDC3A2286D3D800178BB8 /* Main.storyboard */; };
@@ -38,6 +42,14 @@
 /* Begin PBXFileReference section */
 		02094F273CD0C2396BA247F8 /* Pods-ThreeSandOcean.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThreeSandOcean.debug.xcconfig"; path = "Target Support Files/Pods-ThreeSandOcean/Pods-ThreeSandOcean.debug.xcconfig"; sourceTree = "<group>"; };
 		7FA82C7D5427BEBFFA888139 /* libPods-ThreeSandOcean.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ThreeSandOcean.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF0231D6228911640017DAC0 /* NSString+category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+category.m"; sourceTree = "<group>"; };
+		BF0231D7228911640017DAC0 /* MYTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYTools.h; sourceTree = "<group>"; };
+		BF0231D8228911640017DAC0 /* MYTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYTools.m; sourceTree = "<group>"; };
+		BF0231D9228911640017DAC0 /* NSString+category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+category.h"; sourceTree = "<group>"; };
+		BF0231E02289269F0017DAC0 /* NSDate+category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+category.h"; sourceTree = "<group>"; };
+		BF0231E1228926A00017DAC0 /* NSDate+category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+category.m"; sourceTree = "<group>"; };
+		BF0231E3228971790017DAC0 /* UIImage+category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+category.h"; sourceTree = "<group>"; };
+		BF0231E4228971790017DAC0 /* UIImage+category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+category.m"; sourceTree = "<group>"; };
 		BF4CDC312286D3D800178BB8 /* ThreeSandOcean.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThreeSandOcean.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF4CDC342286D3D800178BB8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BF4CDC352286D3D800178BB8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -54,6 +66,7 @@
 		BF4CDC542286D3DA00178BB8 /* ThreeSandOceanUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThreeSandOceanUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF4CDC582286D3DA00178BB8 /* ThreeSandOceanUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThreeSandOceanUITests.m; sourceTree = "<group>"; };
 		BF4CDC5A2286D3DA00178BB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF4CDC672286DAA900178BB8 /* LYHPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYHPrefixHeader.pch; sourceTree = "<group>"; };
 		E9F4658823746F7C218C944F /* Pods-ThreeSandOcean.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThreeSandOcean.release.xcconfig"; path = "Target Support Files/Pods-ThreeSandOcean/Pods-ThreeSandOcean.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -89,7 +102,6 @@
 				02094F273CD0C2396BA247F8 /* Pods-ThreeSandOcean.debug.xcconfig */,
 				E9F4658823746F7C218C944F /* Pods-ThreeSandOcean.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -99,6 +111,22 @@
 				7FA82C7D5427BEBFFA888139 /* libPods-ThreeSandOcean.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BF0231DC228911BB0017DAC0 /* tools */ = {
+			isa = PBXGroup;
+			children = (
+				BF4CDC672286DAA900178BB8 /* LYHPrefixHeader.pch */,
+				BF0231D7228911640017DAC0 /* MYTools.h */,
+				BF0231D8228911640017DAC0 /* MYTools.m */,
+				BF0231D9228911640017DAC0 /* NSString+category.h */,
+				BF0231D6228911640017DAC0 /* NSString+category.m */,
+				BF0231E02289269F0017DAC0 /* NSDate+category.h */,
+				BF0231E1228926A00017DAC0 /* NSDate+category.m */,
+				BF0231E3228971790017DAC0 /* UIImage+category.h */,
+				BF0231E4228971790017DAC0 /* UIImage+category.m */,
+			);
+			path = tools;
 			sourceTree = "<group>";
 		};
 		BF4CDC282286D3D800178BB8 = {
@@ -126,6 +154,7 @@
 		BF4CDC332286D3D800178BB8 /* ThreeSandOcean */ = {
 			isa = PBXGroup;
 			children = (
+				BF0231DC228911BB0017DAC0 /* tools */,
 				BF4CDC342286D3D800178BB8 /* AppDelegate.h */,
 				BF4CDC352286D3D800178BB8 /* AppDelegate.m */,
 				BF4CDC372286D3D800178BB8 /* ViewController.h */,
@@ -338,7 +367,11 @@
 			files = (
 				BF4CDC392286D3D800178BB8 /* ViewController.m in Sources */,
 				BF4CDC442286D3DA00178BB8 /* main.m in Sources */,
+				BF0231E5228971790017DAC0 /* UIImage+category.m in Sources */,
+				BF0231E2228926A00017DAC0 /* NSDate+category.m in Sources */,
+				BF0231DB228911640017DAC0 /* MYTools.m in Sources */,
 				BF4CDC362286D3D800178BB8 /* AppDelegate.m in Sources */,
+				BF0231DA228911640017DAC0 /* NSString+category.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
