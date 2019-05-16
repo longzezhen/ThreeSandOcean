@@ -1,0 +1,47 @@
+//
+//  wholeSituation.h
+//  ThreeSandOcean
+//
+//  Created by 龙泽桢 on 2019/5/15.
+//  Copyright © 2019 tools. All rights reserved.
+//
+
+//#ifndef wholeSituation_h
+//#define wholeSituation_h
+//
+//
+//#endif /* wholeSituation_h */
+
+//屏幕宽高
+#define KScreenWidth [UIScreen mainScreen].bounds.size.width
+#define KScreenHeight [UIScreen mainScreen].bounds.size.height
+//是否是x系列手机
+#define KiPhoneXSeries [MYTools iPhoneXSeries]
+#define KNavBarHeight (KiPhoneXSeries ? 88 : 64)
+//圆角
+#define LayerMakeCorner(view,radius) {(view).layer.cornerRadius=(radius);(view).layer.masksToBounds=YES;}
+//边界
+#define LayerMakeBorder(view,_borderWidth,_borderColor) {(view).layer.borderWidth=(_borderWidth);(view).layer.borderColor=(_borderColor);}
+
+#define END_EDITING  [[[[UIApplication sharedApplication] delegate]window] endEditing:YES]
+
+#define ImageNamed(imageName) [UIImage imageNamed:imageName]
+#define WEAKSELF typeof(self) __weak weakSelf = self
+//color
+#define ColorFromRGBA(rgbValue, alphaValue) [UIColor \
+colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 \
+green:((float)((rgbValue & 0x00FF00) >> 8))/255.0 \
+blue:((float)(rgbValue & 0x0000FF))/255.0 \
+alpha:alphaValue]
+#define ColorFromRGB(rgbValue) UIColorFromRGBA(rgbValue, 1.0)
+//font
+#define KHelvetica @"Helvetica"//统一字体
+#define KFont(fontSize)  [UIFont fontWithName:KHelvetica size:fontSize]
+#define KUniversCondensed @"Univers-Condensed"//金额字体
+#define KFontUniversCondensed(fontSize)    [UIFont fontWithName:kUniversCondensed size:fontSize]
+//应用版本号
+#define KAPPShortVersion                    ([[[NSBundle mainBundle]infoDictionary]objectForKey:@"CFBundleShortVersionString"])
+
+#define KAPPBuildVersion                    ([[[NSBundle mainBundle]infoDictionary]objectForKey:@"CFBundleVersion"])
+//主线程执行
+#define Main(block) dispatch_async(dispatch_get_main_queue(),block)

@@ -7,7 +7,8 @@
 //
 
 #import "AppDelegate.h"
-
+#import "TSOWelcomeViewController.h"
+#import "TSOLoginViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -15,9 +16,37 @@
 @implementation AppDelegate
 
 
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    [self.window setRootViewController:self.navigationCtrl];
+    self.window.backgroundColor = ColorFromRGB(0xFFFFFF);
+    [self.window makeKeyAndVisible];
+    
+    if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"notFirstLaunch"] boolValue]) {
+        //第一次运行进入欢迎页面
+//        HWBootAnimationViewController *bootAnimationView = [[HWBootAnimationViewController alloc] init];
+//        [[PCAppDelegate shareAppDelegate].navigationCtrl pushViewController:bootAnimationView animated:NO];
+        [[NSUserDefaults standardUserDefaults] setObject:@(1) forKey:@"notFirstLaunch"];
+        TSOWelcomeViewController * welcomeVC = [TSOWelcomeViewController new];
+        self.navigationCtrl.viewControllers = @[welcomeVC];
+        
+    }else{
+        [AppDelegate startLoginViewController];
+    }
     return YES;
+}
+
+#pragma mark - private
+
+
+//跳转登录页面
++ (void)startLoginViewController
+{
+    TSOLoginViewController * loginVC = [[TSOLoginViewController alloc] init];
+    [[self shareAppDelegate].navigationCtrl setNavigationBarHidden:YES];
+    [self shareAppDelegate].navigationCtrl.viewControllers = @[loginVC];
 }
 
 
@@ -47,5 +76,18 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+#pragma mark - get
+- (UINavigationController *)navigationCtrl{
+    
+    if (!_navigationCtrl) {
+        _navigationCtrl = [[UINavigationController alloc]init];
+        [_navigationCtrl setNavigationBarHidden:YES];
+    }
+    return _navigationCtrl;
+}
 
++ (AppDelegate *)shareAppDelegate{
+    
+    return (AppDelegate *)[[UIApplication sharedApplication] delegate];
+}
 @end

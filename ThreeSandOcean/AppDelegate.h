@@ -11,7 +11,12 @@
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property (nonatomic, strong) UINavigationController *navigationCtrl;
 
-
++ (AppDelegate *)shareAppDelegate;
+//跳转登录页面
++ (void)startLoginViewController;
+//跳转主页面
++ (void)startMainViewController;
 @end
 
