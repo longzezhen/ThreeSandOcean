@@ -1,16 +1,16 @@
 //
-//  wholeSituation.h
+//  WholeSituation.h
 //  ThreeSandOcean
 //
 //  Created by 龙泽桢 on 2019/5/15.
 //  Copyright © 2019 tools. All rights reserved.
 //
 
-//#ifndef wholeSituation_h
-//#define wholeSituation_h
+//#ifndef WholeSituation_h
+//#define WholeSituation_h
 //
 //
-//#endif /* wholeSituation_h */
+//#endif /* WholeSituation_h */
 
 //屏幕宽高
 #define KScreenWidth [UIScreen mainScreen].bounds.size.width
@@ -18,6 +18,10 @@
 //是否是x系列手机
 #define KiPhoneXSeries [MYTools iPhoneXSeries]
 #define KNavBarHeight (KiPhoneXSeries ? 88 : 64)
+#define KTopHeight   (KiPhoneXSeries ? 24.f:0.f)
+#define KTabBarHeight   (KiPhoneXSeries ? 15.f:0.f)
+//是否是iPad
+#define IS_IPAD  ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
 //圆角
 #define LayerMakeCorner(view,radius) {(view).layer.cornerRadius=(radius);(view).layer.masksToBounds=YES;}
 //边界
@@ -33,7 +37,10 @@ colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 \
 green:((float)((rgbValue & 0x00FF00) >> 8))/255.0 \
 blue:((float)(rgbValue & 0x0000FF))/255.0 \
 alpha:alphaValue]
-#define ColorFromRGB(rgbValue) UIColorFromRGBA(rgbValue, 1.0)
+#define ColorFromRGB(rgbValue) ColorFromRGBA(rgbValue, 1.0)
+
+
+
 //font
 #define KHelvetica @"Helvetica"//统一字体
 #define KFont(fontSize)  [UIFont fontWithName:KHelvetica size:fontSize]
@@ -45,3 +52,8 @@ alpha:alphaValue]
 #define KAPPBuildVersion                    ([[[NSBundle mainBundle]infoDictionary]objectForKey:@"CFBundleVersion"])
 //主线程执行
 #define Main(block) dispatch_async(dispatch_get_main_queue(),block)
+//屏幕比例
+#define Auto_Width(a)       (((KScreenWidth)/(375))*(a))
+#define Auto_Height(a)      (((KScreenHeight)/(667))*(a))
+
+

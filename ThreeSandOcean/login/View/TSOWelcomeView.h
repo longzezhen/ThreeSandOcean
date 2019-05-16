@@ -8,10 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-NS_ASSUME_NONNULL_BEGIN
-
 @interface TSOWelcomeView : UIView
-
+@property (nonatomic,strong) UIImageView * headImageView;
+@property (nonatomic,strong) UILabel * middleLabel;
+@property (nonatomic,strong) UILabel * bottomLabel;
 @end
 
-NS_ASSUME_NONNULL_END

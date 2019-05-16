@@ -13,20 +13,34 @@
 @end
 
 @implementation BaseViewController
-
+#pragma mark - lifeStyle
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.navigationController.navigationBar.translucent = NO;
+    self.tabBarController.tabBar.translucent = NO;
+    //侧滑返回
+    self.navigationController.interactivePopGestureRecognizer.enabled = YES;
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
 }
-*/
 
+-(void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+}
+
+#pragma mark - public
+- (void)goBackBarButton{//返回按钮
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:ImageNamed(@"left_back") style:UIBarButtonItemStylePlain target:self action:@selector(clickGoBackBarButton)];
+    self.navigationItem.leftBarButtonItem.width = 44;
+    [self.view endEditing:YES];
+}
+
+- (void)clickGoBackBarButton{
+    [self.navigationController popViewControllerAnimated:YES];
+}
 @end

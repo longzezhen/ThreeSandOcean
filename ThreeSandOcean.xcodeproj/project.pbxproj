@@ -11,11 +11,13 @@
 		BF0231DB228911640017DAC0 /* MYTools.m in Sources */ = {isa = PBXBuildFile; fileRef = BF0231D8228911640017DAC0 /* MYTools.m */; };
 		BF0231E2228926A00017DAC0 /* NSDate+category.m in Sources */ = {isa = PBXBuildFile; fileRef = BF0231E1228926A00017DAC0 /* NSDate+category.m */; };
 		BF0231E5228971790017DAC0 /* UIImage+category.m in Sources */ = {isa = PBXBuildFile; fileRef = BF0231E4228971790017DAC0 /* UIImage+category.m */; };
+		BF02323F228BBB600017DAC0 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF02323E228BBB600017DAC0 /* BaseViewController.m */; };
+		BF023243228BCD180017DAC0 /* TSOWelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF023242228BCD180017DAC0 /* TSOWelcomeViewController.m */; };
+		BF02324A228BF64F0017DAC0 /* TSOWelcomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF023249228BF64F0017DAC0 /* TSOWelcomeView.m */; };
+		BF02324F228C1E2A0017DAC0 /* TSOLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF02324E228C1E2A0017DAC0 /* TSOLoginViewController.m */; };
+		BF023252228C3E6D0017DAC0 /* TSOPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = BF023251228C3E6D0017DAC0 /* TSOPageControl.m */; };
 		BF4CDC362286D3D800178BB8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BF4CDC352286D3D800178BB8 /* AppDelegate.m */; };
-		BF4CDC392286D3D800178BB8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF4CDC382286D3D800178BB8 /* ViewController.m */; };
-		BF4CDC3C2286D3D800178BB8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF4CDC3A2286D3D800178BB8 /* Main.storyboard */; };
 		BF4CDC3E2286D3DA00178BB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF4CDC3D2286D3DA00178BB8 /* Assets.xcassets */; };
-		BF4CDC412286D3DA00178BB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF4CDC3F2286D3DA00178BB8 /* LaunchScreen.storyboard */; };
 		BF4CDC442286D3DA00178BB8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BF4CDC432286D3DA00178BB8 /* main.m */; };
 		BF4CDC4E2286D3DA00178BB8 /* ThreeSandOceanTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BF4CDC4D2286D3DA00178BB8 /* ThreeSandOceanTests.m */; };
 		BF4CDC592286D3DA00178BB8 /* ThreeSandOceanUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BF4CDC582286D3DA00178BB8 /* ThreeSandOceanUITests.m */; };
@@ -50,14 +52,21 @@
 		BF0231E1228926A00017DAC0 /* NSDate+category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+category.m"; sourceTree = "<group>"; };
 		BF0231E3228971790017DAC0 /* UIImage+category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+category.h"; sourceTree = "<group>"; };
 		BF0231E4228971790017DAC0 /* UIImage+category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+category.m"; sourceTree = "<group>"; };
+		BF02323D228BBB600017DAC0 /* BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		BF02323E228BBB600017DAC0 /* BaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		BF023240228BBFAE0017DAC0 /* WholeSituation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WholeSituation.h; sourceTree = "<group>"; };
+		BF023241228BCD180017DAC0 /* TSOWelcomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSOWelcomeViewController.h; sourceTree = "<group>"; };
+		BF023242228BCD180017DAC0 /* TSOWelcomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TSOWelcomeViewController.m; sourceTree = "<group>"; };
+		BF023248228BF64F0017DAC0 /* TSOWelcomeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSOWelcomeView.h; sourceTree = "<group>"; };
+		BF023249228BF64F0017DAC0 /* TSOWelcomeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TSOWelcomeView.m; sourceTree = "<group>"; };
+		BF02324D228C1E2A0017DAC0 /* TSOLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSOLoginViewController.h; sourceTree = "<group>"; };
+		BF02324E228C1E2A0017DAC0 /* TSOLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TSOLoginViewController.m; sourceTree = "<group>"; };
+		BF023250228C3E6D0017DAC0 /* TSOPageControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSOPageControl.h; sourceTree = "<group>"; };
+		BF023251228C3E6D0017DAC0 /* TSOPageControl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TSOPageControl.m; sourceTree = "<group>"; };
 		BF4CDC312286D3D800178BB8 /* ThreeSandOcean.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThreeSandOcean.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF4CDC342286D3D800178BB8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BF4CDC352286D3D800178BB8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		BF4CDC372286D3D800178BB8 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		BF4CDC382286D3D800178BB8 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		BF4CDC3B2286D3D800178BB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BF4CDC3D2286D3DA00178BB8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		BF4CDC402286D3DA00178BB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF4CDC422286D3DA00178BB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF4CDC432286D3DA00178BB8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BF4CDC492286D3DA00178BB8 /* ThreeSandOceanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThreeSandOceanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -117,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				BF4CDC672286DAA900178BB8 /* LYHPrefixHeader.pch */,
+				BF023240228BBFAE0017DAC0 /* WholeSituation.h */,
 				BF0231D7228911640017DAC0 /* MYTools.h */,
 				BF0231D8228911640017DAC0 /* MYTools.m */,
 				BF0231D9228911640017DAC0 /* NSString+category.h */,
@@ -125,8 +135,56 @@
 				BF0231E1228926A00017DAC0 /* NSDate+category.m */,
 				BF0231E3228971790017DAC0 /* UIImage+category.h */,
 				BF0231E4228971790017DAC0 /* UIImage+category.m */,
+				BF02323D228BBB600017DAC0 /* BaseViewController.h */,
+				BF02323E228BBB600017DAC0 /* BaseViewController.m */,
 			);
 			path = tools;
+			sourceTree = "<group>";
+		};
+		BF02323C228BBA580017DAC0 /* login */ = {
+			isa = PBXGroup;
+			children = (
+				BF023244228BF4D90017DAC0 /* Controller */,
+				BF023245228BF5010017DAC0 /* View */,
+				BF023246228BF5250017DAC0 /* Model */,
+			);
+			path = login;
+			sourceTree = "<group>";
+		};
+		BF023244228BF4D90017DAC0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BF023241228BCD180017DAC0 /* TSOWelcomeViewController.h */,
+				BF023242228BCD180017DAC0 /* TSOWelcomeViewController.m */,
+				BF02324D228C1E2A0017DAC0 /* TSOLoginViewController.h */,
+				BF02324E228C1E2A0017DAC0 /* TSOLoginViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BF023245228BF5010017DAC0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BF023248228BF64F0017DAC0 /* TSOWelcomeView.h */,
+				BF023249228BF64F0017DAC0 /* TSOWelcomeView.m */,
+				BF023250228C3E6D0017DAC0 /* TSOPageControl.h */,
+				BF023251228C3E6D0017DAC0 /* TSOPageControl.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BF023246228BF5250017DAC0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BF023247228BF5B30017DAC0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		BF4CDC282286D3D800178BB8 = {
@@ -155,15 +213,13 @@
 			isa = PBXGroup;
 			children = (
 				BF0231DC228911BB0017DAC0 /* tools */,
+				BF02323C228BBA580017DAC0 /* login */,
 				BF4CDC342286D3D800178BB8 /* AppDelegate.h */,
 				BF4CDC352286D3D800178BB8 /* AppDelegate.m */,
-				BF4CDC372286D3D800178BB8 /* ViewController.h */,
-				BF4CDC382286D3D800178BB8 /* ViewController.m */,
-				BF4CDC3A2286D3D800178BB8 /* Main.storyboard */,
 				BF4CDC3D2286D3DA00178BB8 /* Assets.xcassets */,
-				BF4CDC3F2286D3DA00178BB8 /* LaunchScreen.storyboard */,
 				BF4CDC422286D3DA00178BB8 /* Info.plist */,
 				BF4CDC432286D3DA00178BB8 /* main.m */,
+				BF023247228BF5B30017DAC0 /* Supporting Files */,
 			);
 			path = ThreeSandOcean;
 			sourceTree = "<group>";
@@ -291,9 +347,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF4CDC412286D3DA00178BB8 /* LaunchScreen.storyboard in Resources */,
 				BF4CDC3E2286D3DA00178BB8 /* Assets.xcassets in Resources */,
-				BF4CDC3C2286D3D800178BB8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,8 +419,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF4CDC392286D3D800178BB8 /* ViewController.m in Sources */,
+				BF02323F228BBB600017DAC0 /* BaseViewController.m in Sources */,
+				BF023243228BCD180017DAC0 /* TSOWelcomeViewController.m in Sources */,
 				BF4CDC442286D3DA00178BB8 /* main.m in Sources */,
+				BF02324F228C1E2A0017DAC0 /* TSOLoginViewController.m in Sources */,
+				BF02324A228BF64F0017DAC0 /* TSOWelcomeView.m in Sources */,
+				BF023252228C3E6D0017DAC0 /* TSOPageControl.m in Sources */,
 				BF0231E5228971790017DAC0 /* UIImage+category.m in Sources */,
 				BF0231E2228926A00017DAC0 /* NSDate+category.m in Sources */,
 				BF0231DB228911640017DAC0 /* MYTools.m in Sources */,
@@ -405,25 +463,6 @@
 			targetProxy = BF4CDC552286D3DA00178BB8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		BF4CDC3A2286D3D800178BB8 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BF4CDC3B2286D3D800178BB8 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		BF4CDC3F2286D3DA00178BB8 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BF4CDC402286D3DA00178BB8 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		BF4CDC5B2286D3DA00178BB8 /* Debug */ = {
@@ -545,6 +584,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 64993232M7;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = ThreeSandOcean/tools/LYHPrefixHeader.pch;
 				INFOPLIST_FILE = ThreeSandOcean/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -563,6 +604,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 64993232M7;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = ThreeSandOcean/tools/LYHPrefixHeader.pch;
 				INFOPLIST_FILE = ThreeSandOcean/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

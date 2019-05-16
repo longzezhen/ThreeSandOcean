@@ -1,14 +1,15 @@
 //
-//  WelcomeViewController.m
+//  TSOWelcomeViewController.m
 //  ThreeSandOcean
 //
 //  Created by 龙泽桢 on 2019/5/15.
 //  Copyright © 2019 tools. All rights reserved.
 //
 
-#import "WelcomeViewController.h"
+#import "TSOWelcomeViewController.h"
 #import "TSOWelcomeView.h"
-@interface WelcomeViewController ()<UIScrollViewDelegate>
+#import "TSOPageControl.h"
+@interface TSOWelcomeViewController ()<UIScrollViewDelegate>
 @property (nonatomic,strong) UIScrollView * scrollView;
 @property (nonatomic,strong) TSOWelcomeView * firstWelcomeView;
 @property (nonatomic,strong) TSOWelcomeView * secondWelcomeView;
@@ -16,7 +17,7 @@
 @property (nonatomic,strong) UIPageControl * pageControl;
 @end
 
-@implementation WelcomeViewController
+@implementation TSOWelcomeViewController
 #pragma mark - lifeCycle
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -41,7 +42,7 @@
 
 -(void)clickTgButton
 {
-    
+    [AppDelegate startLoginViewController];
 }
 
 #pragma mark - UIScrollViewDelegate
@@ -59,6 +60,10 @@
 -(UIScrollView *)scrollView
 {
     if (!_scrollView) {
+        //解决scrollView 上的子控件下移;
+        UIView * clearView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0, 0)];
+        [self.view addSubview:clearView];
+    
         _scrollView = [[UIScrollView alloc] init];
         _scrollView.delegate = self;
         _scrollView.pagingEnabled = YES;
@@ -81,7 +86,8 @@
         _firstWelcomeView.bottomLabel.text = @"科学养殖 增产增收";
         [self.scrollView addSubview:_firstWelcomeView];
         [_firstWelcomeView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.top.mas_equalTo(0);
+            make.top.mas_equalTo(0);
+            make.left.mas_equalTo(0);
             make.size.mas_equalTo(CGSizeMake(KScreenWidth, KScreenHeight));
         }];
     }
@@ -117,6 +123,7 @@
             make.top.mas_equalTo(0);
             make.left.mas_equalTo(self.secondWelcomeView.mas_right).mas_equalTo(0);
             make.size.mas_equalTo(CGSizeMake(KScreenWidth, KScreenHeight));
+            make.right.mas_equalTo(0);
         }];
         
         UIButton * tgButton = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -129,7 +136,7 @@
         [_thirdWelcomeView addSubview:tgButton];
         [tgButton mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.mas_equalTo(Auto_Width(25));
-            make.right.mas_equalTo(Auto_Width(25));
+            make.right.mas_equalTo(-Auto_Width(25));
             make.size.mas_equalTo(CGSizeMake(Auto_Width(36), Auto_Width(36)));
         }];
     }
@@ -143,7 +150,7 @@
         _pageControl.numberOfPages = 3;
         _pageControl.currentPage = 0;
         _pageControl.currentPageIndicatorTintColor = ColorFromRGB(0x6881FD);
-        _pageControl.pageIndicatorTintColor = [UIColor whiteColor];
+        _pageControl.pageIndicatorTintColor = ColorFromRGB(0x6881FD);
         _pageControl.hidesForSinglePage = YES;
         _pageControl.defersCurrentPageDisplay = YES;
         [_pageControl addTarget:self action:@selector(valueChanged) forControlEvents:UIControlEventValueChanged];
@@ -151,7 +158,7 @@
         [_pageControl mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.right.mas_equalTo(0);
             make.height.mas_equalTo(Auto_Height(20));
-            make.bottom.mas_equalTo(Auto_Height(25));
+            make.bottom.mas_equalTo(-Auto_Height(28+KTabBarHeight));
         }];
     }
     return _pageControl;

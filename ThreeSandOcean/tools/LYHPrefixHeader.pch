@@ -11,4 +11,22 @@
 
 
 
+/*
+ 将OC的头文件与C语言的源文件进行有效的隔离。也就是说，你在OC头文件前后加了这个条件编译之后，编译器便不再将OC的头文件拷贝到C语言的源文件中，它只会把OC的头文件拷贝到OC的源文件中
+ */
+#ifdef __OBJC__
+
+#import "MYTools.h"
+#import "NSString+category.h"
+#import "NSDate+category.h"
+#import "UIImage+category.h"
+#import "WholeSituation.h"
+#import <Masonry/Masonry.h>
+#import "AppDelegate.h"
+
+#endif
+
+
+
+
 #endif /* LYHPrefixHeader_pch */

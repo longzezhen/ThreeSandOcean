@@ -1,5 +1,5 @@
 //
-//  BaseViewController.h
+//  TSOPageControl.h
 //  ThreeSandOcean
 //
 //  Created by 龙泽桢 on 2019/5/15.
@@ -10,9 +10,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface BaseViewController : UIViewController
-- (void)goBackBarButton;//返回按钮
-- (void)clickGoBackBarButton;//可覆盖自定义返回方法
+@interface TSOPageControl : UIPageControl
+
 @end
 
 NS_ASSUME_NONNULL_END
