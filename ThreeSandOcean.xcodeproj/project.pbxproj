@@ -16,11 +16,31 @@
 		BF02324A228BF64F0017DAC0 /* TSOWelcomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF023249228BF64F0017DAC0 /* TSOWelcomeView.m */; };
 		BF02324F228C1E2A0017DAC0 /* TSOLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF02324E228C1E2A0017DAC0 /* TSOLoginViewController.m */; };
 		BF023252228C3E6D0017DAC0 /* TSOPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = BF023251228C3E6D0017DAC0 /* TSOPageControl.m */; };
+		BF023255228D3E200017DAC0 /* BaseNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF023254228D3E200017DAC0 /* BaseNavViewController.m */; };
+		BF02325B228D44A30017DAC0 /* TSOMainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF02325A228D44A30017DAC0 /* TSOMainTabBarController.m */; };
+		BF023272228D4DB70017DAC0 /* TSOFisheryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF023271228D4DB70017DAC0 /* TSOFisheryViewController.m */; };
+		BF023275228D4E050017DAC0 /* TSOBreedAquaticsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF023274228D4E050017DAC0 /* TSOBreedAquaticsViewController.m */; };
+		BF023278228D4E3E0017DAC0 /* TSOFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF023277228D4E3E0017DAC0 /* TSOFeedViewController.m */; };
+		BF02327B228D4E7D0017DAC0 /* TSOMonitoringViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF02327A228D4E7D0017DAC0 /* TSOMonitoringViewController.m */; };
+		BF02327E228D4E930017DAC0 /* TSOMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF02327D228D4E930017DAC0 /* TSOMineViewController.m */; };
+		BF023281228D752E0017DAC0 /* TSOMineListView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF023280228D752E0017DAC0 /* TSOMineListView.m */; };
+		BF023284228EB77C0017DAC0 /* TSOMoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF023283228EB77C0017DAC0 /* TSOMoreViewController.m */; };
+		BF023287228EB8510017DAC0 /* TSOMoreListView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF023286228EB8510017DAC0 /* TSOMoreListView.m */; };
 		BF4CDC362286D3D800178BB8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BF4CDC352286D3D800178BB8 /* AppDelegate.m */; };
 		BF4CDC3E2286D3DA00178BB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF4CDC3D2286D3DA00178BB8 /* Assets.xcassets */; };
 		BF4CDC442286D3DA00178BB8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BF4CDC432286D3DA00178BB8 /* main.m */; };
 		BF4CDC4E2286D3DA00178BB8 /* ThreeSandOceanTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BF4CDC4D2286D3DA00178BB8 /* ThreeSandOceanTests.m */; };
 		BF4CDC592286D3DA00178BB8 /* ThreeSandOceanUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BF4CDC582286D3DA00178BB8 /* ThreeSandOceanUITests.m */; };
+		BF74CF4122924F58003B3275 /* TSOPersonInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF74CF4022924F57003B3275 /* TSOPersonInfoViewController.m */; };
+		BF74CF44229257E6003B3275 /* TSOPersonInfoListView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF74CF43229257E6003B3275 /* TSOPersonInfoListView.m */; };
+		BFFFF1D62293DBB000666AD4 /* TSOBreedAquaticsCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BFFFF1D52293DBB000666AD4 /* TSOBreedAquaticsCollectionViewCell.m */; };
+		BFFFF1D92293EE6100666AD4 /* TSONetcageDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFFFF1D82293EE6100666AD4 /* TSONetcageDetailViewController.m */; };
+		BFFFF1DC2293FA5D00666AD4 /* TSOMonitoringCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BFFFF1DB2293FA5D00666AD4 /* TSOMonitoringCollectionViewCell.m */; };
+		BFFFF1DF2293FFB400666AD4 /* TSOMonitoringHeaderCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = BFFFF1DE2293FFB400666AD4 /* TSOMonitoringHeaderCollectionReusableView.m */; };
+		BFFFF1E2229423AC00666AD4 /* TSOAboutUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFFFF1E1229423AC00666AD4 /* TSOAboutUsViewController.m */; };
+		BFFFF1E52294297C00666AD4 /* TSOFeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFFFF1E42294297C00666AD4 /* TSOFeedbackViewController.m */; };
+		BFFFF1ED229527E900666AD4 /* UIButton+category.m in Sources */ = {isa = PBXBuildFile; fileRef = BFFFF1EC229527E900666AD4 /* UIButton+category.m */; };
+		BFFFF1EF22952D2C00666AD4 /* fish.gif in Resources */ = {isa = PBXBuildFile; fileRef = BFFFF1EE22952D2C00666AD4 /* fish.gif */; };
 		D5EBA5DDF5A51EAB18F071CD /* libPods-ThreeSandOcean.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FA82C7D5427BEBFFA888139 /* libPods-ThreeSandOcean.a */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +83,26 @@
 		BF02324E228C1E2A0017DAC0 /* TSOLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TSOLoginViewController.m; sourceTree = "<group>"; };
 		BF023250228C3E6D0017DAC0 /* TSOPageControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSOPageControl.h; sourceTree = "<group>"; };
 		BF023251228C3E6D0017DAC0 /* TSOPageControl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TSOPageControl.m; sourceTree = "<group>"; };
+		BF023253228D3E200017DAC0 /* BaseNavViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseNavViewController.h; sourceTree = "<group>"; };
+		BF023254228D3E200017DAC0 /* BaseNavViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseNavViewController.m; sourceTree = "<group>"; };
+		BF023259228D44A30017DAC0 /* TSOMainTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSOMainTabBarController.h; sourceTree = "<group>"; };
+		BF02325A228D44A30017DAC0 /* TSOMainTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TSOMainTabBarController.m; sourceTree = "<group>"; };
+		BF023270228D4DB70017DAC0 /* TSOFisheryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSOFisheryViewController.h; sourceTree = "<group>"; };
+		BF023271228D4DB70017DAC0 /* TSOFisheryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TSOFisheryViewController.m; sourceTree = "<group>"; };
+		BF023273228D4E050017DAC0 /* TSOBreedAquaticsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSOBreedAquaticsViewController.h; sourceTree = "<group>"; };
+		BF023274228D4E050017DAC0 /* TSOBreedAquaticsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TSOBreedAquaticsViewController.m; sourceTree = "<group>"; };
+		BF023276228D4E3E0017DAC0 /* TSOFeedViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSOFeedViewController.h; sourceTree = "<group>"; };
+		BF023277228D4E3E0017DAC0 /* TSOFeedViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TSOFeedViewController.m; sourceTree = "<group>"; };
+		BF023279228D4E7D0017DAC0 /* TSOMonitoringViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSOMonitoringViewController.h; sourceTree = "<group>"; };
+		BF02327A228D4E7D0017DAC0 /* TSOMonitoringViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TSOMonitoringViewController.m; sourceTree = "<group>"; };
+		BF02327C228D4E930017DAC0 /* TSOMineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSOMineViewController.h; sourceTree = "<group>"; };
+		BF02327D228D4E930017DAC0 /* TSOMineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TSOMineViewController.m; sourceTree = "<group>"; };
+		BF02327F228D752E0017DAC0 /* TSOMineListView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSOMineListView.h; sourceTree = "<group>"; };
+		BF023280228D752E0017DAC0 /* TSOMineListView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TSOMineListView.m; sourceTree = "<group>"; };
+		BF023282228EB77C0017DAC0 /* TSOMoreViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSOMoreViewController.h; sourceTree = "<group>"; };
+		BF023283228EB77C0017DAC0 /* TSOMoreViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TSOMoreViewController.m; sourceTree = "<group>"; };
+		BF023285228EB8510017DAC0 /* TSOMoreListView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSOMoreListView.h; sourceTree = "<group>"; };
+		BF023286228EB8510017DAC0 /* TSOMoreListView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TSOMoreListView.m; sourceTree = "<group>"; };
 		BF4CDC312286D3D800178BB8 /* ThreeSandOcean.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThreeSandOcean.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF4CDC342286D3D800178BB8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BF4CDC352286D3D800178BB8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -76,6 +116,25 @@
 		BF4CDC582286D3DA00178BB8 /* ThreeSandOceanUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThreeSandOceanUITests.m; sourceTree = "<group>"; };
 		BF4CDC5A2286D3DA00178BB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF4CDC672286DAA900178BB8 /* LYHPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYHPrefixHeader.pch; sourceTree = "<group>"; };
+		BF74CF3F22924F57003B3275 /* TSOPersonInfoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSOPersonInfoViewController.h; sourceTree = "<group>"; };
+		BF74CF4022924F57003B3275 /* TSOPersonInfoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TSOPersonInfoViewController.m; sourceTree = "<group>"; };
+		BF74CF42229257E6003B3275 /* TSOPersonInfoListView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSOPersonInfoListView.h; sourceTree = "<group>"; };
+		BF74CF43229257E6003B3275 /* TSOPersonInfoListView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TSOPersonInfoListView.m; sourceTree = "<group>"; };
+		BFFFF1D42293DBB000666AD4 /* TSOBreedAquaticsCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSOBreedAquaticsCollectionViewCell.h; sourceTree = "<group>"; };
+		BFFFF1D52293DBB000666AD4 /* TSOBreedAquaticsCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TSOBreedAquaticsCollectionViewCell.m; sourceTree = "<group>"; };
+		BFFFF1D72293EE6100666AD4 /* TSONetcageDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSONetcageDetailViewController.h; sourceTree = "<group>"; };
+		BFFFF1D82293EE6100666AD4 /* TSONetcageDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TSONetcageDetailViewController.m; sourceTree = "<group>"; };
+		BFFFF1DA2293FA5D00666AD4 /* TSOMonitoringCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSOMonitoringCollectionViewCell.h; sourceTree = "<group>"; };
+		BFFFF1DB2293FA5D00666AD4 /* TSOMonitoringCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TSOMonitoringCollectionViewCell.m; sourceTree = "<group>"; };
+		BFFFF1DD2293FFB400666AD4 /* TSOMonitoringHeaderCollectionReusableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSOMonitoringHeaderCollectionReusableView.h; sourceTree = "<group>"; };
+		BFFFF1DE2293FFB400666AD4 /* TSOMonitoringHeaderCollectionReusableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TSOMonitoringHeaderCollectionReusableView.m; sourceTree = "<group>"; };
+		BFFFF1E0229423AC00666AD4 /* TSOAboutUsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSOAboutUsViewController.h; sourceTree = "<group>"; };
+		BFFFF1E1229423AC00666AD4 /* TSOAboutUsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TSOAboutUsViewController.m; sourceTree = "<group>"; };
+		BFFFF1E32294297C00666AD4 /* TSOFeedbackViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSOFeedbackViewController.h; sourceTree = "<group>"; };
+		BFFFF1E42294297C00666AD4 /* TSOFeedbackViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TSOFeedbackViewController.m; sourceTree = "<group>"; };
+		BFFFF1EB229527E900666AD4 /* UIButton+category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+category.h"; sourceTree = "<group>"; };
+		BFFFF1EC229527E900666AD4 /* UIButton+category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+category.m"; sourceTree = "<group>"; };
+		BFFFF1EE22952D2C00666AD4 /* fish.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = fish.gif; sourceTree = "<group>"; };
 		E9F4658823746F7C218C944F /* Pods-ThreeSandOcean.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThreeSandOcean.release.xcconfig"; path = "Target Support Files/Pods-ThreeSandOcean/Pods-ThreeSandOcean.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -125,6 +184,7 @@
 		BF0231DC228911BB0017DAC0 /* tools */ = {
 			isa = PBXGroup;
 			children = (
+				BFFFF1EE22952D2C00666AD4 /* fish.gif */,
 				BF4CDC672286DAA900178BB8 /* LYHPrefixHeader.pch */,
 				BF023240228BBFAE0017DAC0 /* WholeSituation.h */,
 				BF0231D7228911640017DAC0 /* MYTools.h */,
@@ -135,20 +195,24 @@
 				BF0231E1228926A00017DAC0 /* NSDate+category.m */,
 				BF0231E3228971790017DAC0 /* UIImage+category.h */,
 				BF0231E4228971790017DAC0 /* UIImage+category.m */,
+				BFFFF1EB229527E900666AD4 /* UIButton+category.h */,
+				BFFFF1EC229527E900666AD4 /* UIButton+category.m */,
 				BF02323D228BBB600017DAC0 /* BaseViewController.h */,
 				BF02323E228BBB600017DAC0 /* BaseViewController.m */,
+				BF023253228D3E200017DAC0 /* BaseNavViewController.h */,
+				BF023254228D3E200017DAC0 /* BaseNavViewController.m */,
 			);
 			path = tools;
 			sourceTree = "<group>";
 		};
-		BF02323C228BBA580017DAC0 /* login */ = {
+		BF02323C228BBA580017DAC0 /* Login */ = {
 			isa = PBXGroup;
 			children = (
 				BF023244228BF4D90017DAC0 /* Controller */,
 				BF023245228BF5010017DAC0 /* View */,
 				BF023246228BF5250017DAC0 /* Model */,
 			);
-			path = login;
+			path = Login;
 			sourceTree = "<group>";
 		};
 		BF023244228BF4D90017DAC0 /* Controller */ = {
@@ -187,6 +251,193 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		BF02325C228D48940017DAC0 /* Fishery */ = {
+			isa = PBXGroup;
+			children = (
+				BF023261228D4BD60017DAC0 /* Controller */,
+				BF023262228D4C040017DAC0 /* View */,
+				BF023263228D4C120017DAC0 /* Model */,
+			);
+			path = Fishery;
+			sourceTree = "<group>";
+		};
+		BF02325D228D49280017DAC0 /* BreedAquatics */ = {
+			isa = PBXGroup;
+			children = (
+				BF023264228D4C220017DAC0 /* Controller */,
+				BF023265228D4CDD0017DAC0 /* View */,
+				BF023266228D4CE50017DAC0 /* Model */,
+			);
+			path = BreedAquatics;
+			sourceTree = "<group>";
+		};
+		BF02325E228D49A30017DAC0 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				BF023267228D4CFD0017DAC0 /* Controller */,
+				BF023268228D4D070017DAC0 /* View */,
+				BF023269228D4D0D0017DAC0 /* Model */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		BF02325F228D4A260017DAC0 /* Monitoring */ = {
+			isa = PBXGroup;
+			children = (
+				BF02326A228D4D1A0017DAC0 /* Controller */,
+				BF02326B228D4D240017DAC0 /* View */,
+				BF02326C228D4D2C0017DAC0 /* Model */,
+			);
+			path = Monitoring;
+			sourceTree = "<group>";
+		};
+		BF023260228D4A610017DAC0 /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				BF02326D228D4D360017DAC0 /* Controller */,
+				BF02326E228D4D480017DAC0 /* View */,
+				BF02326F228D4D550017DAC0 /* Model */,
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		BF023261228D4BD60017DAC0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BF023270228D4DB70017DAC0 /* TSOFisheryViewController.h */,
+				BF023271228D4DB70017DAC0 /* TSOFisheryViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BF023262228D4C040017DAC0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BF023263228D4C120017DAC0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BF023264228D4C220017DAC0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BF023273228D4E050017DAC0 /* TSOBreedAquaticsViewController.h */,
+				BF023274228D4E050017DAC0 /* TSOBreedAquaticsViewController.m */,
+				BFFFF1D72293EE6100666AD4 /* TSONetcageDetailViewController.h */,
+				BFFFF1D82293EE6100666AD4 /* TSONetcageDetailViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BF023265228D4CDD0017DAC0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BFFFF1D42293DBB000666AD4 /* TSOBreedAquaticsCollectionViewCell.h */,
+				BFFFF1D52293DBB000666AD4 /* TSOBreedAquaticsCollectionViewCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BF023266228D4CE50017DAC0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BF023267228D4CFD0017DAC0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BF023276228D4E3E0017DAC0 /* TSOFeedViewController.h */,
+				BF023277228D4E3E0017DAC0 /* TSOFeedViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BF023268228D4D070017DAC0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BF023269228D4D0D0017DAC0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BF02326A228D4D1A0017DAC0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BF023279228D4E7D0017DAC0 /* TSOMonitoringViewController.h */,
+				BF02327A228D4E7D0017DAC0 /* TSOMonitoringViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BF02326B228D4D240017DAC0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BFFFF1DA2293FA5D00666AD4 /* TSOMonitoringCollectionViewCell.h */,
+				BFFFF1DB2293FA5D00666AD4 /* TSOMonitoringCollectionViewCell.m */,
+				BFFFF1DD2293FFB400666AD4 /* TSOMonitoringHeaderCollectionReusableView.h */,
+				BFFFF1DE2293FFB400666AD4 /* TSOMonitoringHeaderCollectionReusableView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BF02326C228D4D2C0017DAC0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BF02326D228D4D360017DAC0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BF02327C228D4E930017DAC0 /* TSOMineViewController.h */,
+				BF02327D228D4E930017DAC0 /* TSOMineViewController.m */,
+				BF023282228EB77C0017DAC0 /* TSOMoreViewController.h */,
+				BF023283228EB77C0017DAC0 /* TSOMoreViewController.m */,
+				BF74CF3F22924F57003B3275 /* TSOPersonInfoViewController.h */,
+				BF74CF4022924F57003B3275 /* TSOPersonInfoViewController.m */,
+				BFFFF1E0229423AC00666AD4 /* TSOAboutUsViewController.h */,
+				BFFFF1E1229423AC00666AD4 /* TSOAboutUsViewController.m */,
+				BFFFF1E32294297C00666AD4 /* TSOFeedbackViewController.h */,
+				BFFFF1E42294297C00666AD4 /* TSOFeedbackViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BF02326E228D4D480017DAC0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BF02327F228D752E0017DAC0 /* TSOMineListView.h */,
+				BF023280228D752E0017DAC0 /* TSOMineListView.m */,
+				BF023285228EB8510017DAC0 /* TSOMoreListView.h */,
+				BF023286228EB8510017DAC0 /* TSOMoreListView.m */,
+				BF74CF42229257E6003B3275 /* TSOPersonInfoListView.h */,
+				BF74CF43229257E6003B3275 /* TSOPersonInfoListView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BF02326F228D4D550017DAC0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		BF4CDC282286D3D800178BB8 = {
 			isa = PBXGroup;
 			children = (
@@ -213,9 +464,16 @@
 			isa = PBXGroup;
 			children = (
 				BF0231DC228911BB0017DAC0 /* tools */,
-				BF02323C228BBA580017DAC0 /* login */,
+				BF02323C228BBA580017DAC0 /* Login */,
+				BF02325C228D48940017DAC0 /* Fishery */,
+				BF02325D228D49280017DAC0 /* BreedAquatics */,
+				BF02325E228D49A30017DAC0 /* Feed */,
+				BF02325F228D4A260017DAC0 /* Monitoring */,
+				BF023260228D4A610017DAC0 /* Mine */,
 				BF4CDC342286D3D800178BB8 /* AppDelegate.h */,
 				BF4CDC352286D3D800178BB8 /* AppDelegate.m */,
+				BF023259228D44A30017DAC0 /* TSOMainTabBarController.h */,
+				BF02325A228D44A30017DAC0 /* TSOMainTabBarController.m */,
 				BF4CDC3D2286D3DA00178BB8 /* Assets.xcassets */,
 				BF4CDC422286D3DA00178BB8 /* Info.plist */,
 				BF4CDC432286D3DA00178BB8 /* main.m */,
@@ -347,6 +605,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFFFF1EF22952D2C00666AD4 /* fish.gif in Resources */,
 				BF4CDC3E2286D3DA00178BB8 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -423,12 +682,31 @@
 				BF023243228BCD180017DAC0 /* TSOWelcomeViewController.m in Sources */,
 				BF4CDC442286D3DA00178BB8 /* main.m in Sources */,
 				BF02324F228C1E2A0017DAC0 /* TSOLoginViewController.m in Sources */,
+				BFFFF1DF2293FFB400666AD4 /* TSOMonitoringHeaderCollectionReusableView.m in Sources */,
+				BF023287228EB8510017DAC0 /* TSOMoreListView.m in Sources */,
+				BF02325B228D44A30017DAC0 /* TSOMainTabBarController.m in Sources */,
 				BF02324A228BF64F0017DAC0 /* TSOWelcomeView.m in Sources */,
+				BFFFF1DC2293FA5D00666AD4 /* TSOMonitoringCollectionViewCell.m in Sources */,
+				BF023275228D4E050017DAC0 /* TSOBreedAquaticsViewController.m in Sources */,
+				BF023255228D3E200017DAC0 /* BaseNavViewController.m in Sources */,
+				BFFFF1D62293DBB000666AD4 /* TSOBreedAquaticsCollectionViewCell.m in Sources */,
 				BF023252228C3E6D0017DAC0 /* TSOPageControl.m in Sources */,
+				BF74CF4122924F58003B3275 /* TSOPersonInfoViewController.m in Sources */,
+				BF02327B228D4E7D0017DAC0 /* TSOMonitoringViewController.m in Sources */,
 				BF0231E5228971790017DAC0 /* UIImage+category.m in Sources */,
 				BF0231E2228926A00017DAC0 /* NSDate+category.m in Sources */,
+				BF023278228D4E3E0017DAC0 /* TSOFeedViewController.m in Sources */,
+				BF023281228D752E0017DAC0 /* TSOMineListView.m in Sources */,
 				BF0231DB228911640017DAC0 /* MYTools.m in Sources */,
 				BF4CDC362286D3D800178BB8 /* AppDelegate.m in Sources */,
+				BF023272228D4DB70017DAC0 /* TSOFisheryViewController.m in Sources */,
+				BFFFF1D92293EE6100666AD4 /* TSONetcageDetailViewController.m in Sources */,
+				BF74CF44229257E6003B3275 /* TSOPersonInfoListView.m in Sources */,
+				BF02327E228D4E930017DAC0 /* TSOMineViewController.m in Sources */,
+				BFFFF1E2229423AC00666AD4 /* TSOAboutUsViewController.m in Sources */,
+				BF023284228EB77C0017DAC0 /* TSOMoreViewController.m in Sources */,
+				BFFFF1ED229527E900666AD4 /* UIButton+category.m in Sources */,
+				BFFFF1E52294297C00666AD4 /* TSOFeedbackViewController.m in Sources */,
 				BF0231DA228911640017DAC0 /* NSString+category.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

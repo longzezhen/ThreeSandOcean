@@ -27,5 +27,8 @@
 
 //判断是否是X系列
 + (BOOL)iPhoneXSeries;
+
+//view转image
++(UIImage *)convertViewToImage:(UIView *)view;
 @end
 

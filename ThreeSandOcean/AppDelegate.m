@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "TSOWelcomeViewController.h"
 #import "TSOLoginViewController.h"
+#import "TSOMainTabBarController.h"
 @interface AppDelegate ()
 
 @end
@@ -24,10 +25,8 @@
     self.window.backgroundColor = ColorFromRGB(0xFFFFFF);
     [self.window makeKeyAndVisible];
     
-    if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"notFirstLaunch"] boolValue]) {
+    if (![[[NSUserDefaults standardUserDefaults] objectForKey:@"notFirstLaunch"] boolValue]) {
         //第一次运行进入欢迎页面
-//        HWBootAnimationViewController *bootAnimationView = [[HWBootAnimationViewController alloc] init];
-//        [[PCAppDelegate shareAppDelegate].navigationCtrl pushViewController:bootAnimationView animated:NO];
         [[NSUserDefaults standardUserDefaults] setObject:@(1) forKey:@"notFirstLaunch"];
         TSOWelcomeViewController * welcomeVC = [TSOWelcomeViewController new];
         self.navigationCtrl.viewControllers = @[welcomeVC];
@@ -38,15 +37,21 @@
     return YES;
 }
 
-#pragma mark - private
-
-
+#pragma mark - public
 //跳转登录页面
 + (void)startLoginViewController
 {
     TSOLoginViewController * loginVC = [[TSOLoginViewController alloc] init];
     [[self shareAppDelegate].navigationCtrl setNavigationBarHidden:YES];
     [self shareAppDelegate].navigationCtrl.viewControllers = @[loginVC];
+}
+
+//跳转主页面
++ (void)startMainViewController
+{
+    TSOMainTabBarController *tabbarVc = [[TSOMainTabBarController alloc]init];
+    [[AppDelegate shareAppDelegate].navigationCtrl setNavigationBarHidden:YES];
+    [self shareAppDelegate].navigationCtrl.viewControllers = @[tabbarVc];
 }
 
 

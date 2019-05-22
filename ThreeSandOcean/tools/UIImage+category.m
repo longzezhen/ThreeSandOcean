@@ -44,4 +44,19 @@
     UIGraphicsEndImageContext();
     return resultImage;
 }
+
+//view 颜色转image
++ (UIImage *)drawImageWithSize:(CGSize)size color:(UIColor *)color{
+    
+    UIImage *renderImage;
+    UIView *renderView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, size.width, size.height)];
+    renderView.backgroundColor = color;
+    UIGraphicsBeginImageContextWithOptions(size, NO, [UIScreen mainScreen].scale);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    [renderView.layer renderInContext:context];
+    renderImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return renderImage;
+    
+}
 @end

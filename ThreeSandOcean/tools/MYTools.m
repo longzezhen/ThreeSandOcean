@@ -57,4 +57,17 @@
     }
     return iPhoneXSeries;
 }
+
+#pragma mark - view转image
++(UIImage *)convertViewToImage:(UIView *)view
+{
+    UIImage *imageRet = [[UIImage alloc]init];
+    //UIGraphicsBeginImageContextWithOptions(区域大小, 是否是非透明的, 屏幕密度);
+    UIGraphicsBeginImageContextWithOptions(view.frame.size, YES, [UIScreen mainScreen].scale);
+    [view.layer renderInContext:UIGraphicsGetCurrentContext()];
+    imageRet = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return imageRet;
+}
 @end

@@ -20,10 +20,11 @@
 #import "NSString+category.h"
 #import "NSDate+category.h"
 #import "UIImage+category.h"
+#import "UIButton+category.h"
 #import "WholeSituation.h"
 #import <Masonry/Masonry.h>
 #import "AppDelegate.h"
-
+#import "BaseNavViewController.h"
 #endif
 
 

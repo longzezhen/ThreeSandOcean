@@ -12,6 +12,8 @@
 +(UIImage *)compressImageQuality:(UIImage *)image toByte:(NSInteger)maxLength;
 //压缩图片尺寸
 +(UIImage *)compressImageSize:(UIImage *)image toSize:(CGSize)size;
+//view颜色转image
++ (UIImage *)drawImageWithSize:(CGSize)size color:(UIColor *)color;
 @end
 
 

@@ -14,7 +14,7 @@
 @property (nonatomic,strong) TSOWelcomeView * firstWelcomeView;
 @property (nonatomic,strong) TSOWelcomeView * secondWelcomeView;
 @property (nonatomic,strong) TSOWelcomeView * thirdWelcomeView;
-@property (nonatomic,strong) UIPageControl * pageControl;
+@property (nonatomic,strong) TSOPageControl * pageControl;
 @end
 
 @implementation TSOWelcomeViewController
@@ -143,14 +143,19 @@
     return _thirdWelcomeView;
 }
 
--(UIPageControl *)pageControl
+-(TSOPageControl *)pageControl
 {
     if (!_pageControl) {
-        _pageControl = [[UIPageControl alloc] init];
+        _pageControl = [[TSOPageControl alloc] init];
         _pageControl.numberOfPages = 3;
         _pageControl.currentPage = 0;
+        //将点显示成图片的方法
+        [_pageControl setValue:[UIImage imageNamed:@"welcome_one"] forKeyPath:@"_currentPageImage"];
+        [_pageControl setValue:[UIImage imageNamed:@"left_back"] forKeyPath:@"_pageImage"];
+        //设置点的颜色的方法
         _pageControl.currentPageIndicatorTintColor = ColorFromRGB(0x6881FD);
         _pageControl.pageIndicatorTintColor = ColorFromRGB(0x6881FD);
+        
         _pageControl.hidesForSinglePage = YES;
         _pageControl.defersCurrentPageDisplay = YES;
         [_pageControl addTarget:self action:@selector(valueChanged) forControlEvents:UIControlEventValueChanged];

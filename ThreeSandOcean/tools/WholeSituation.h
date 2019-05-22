@@ -19,7 +19,7 @@
 #define KiPhoneXSeries [MYTools iPhoneXSeries]
 #define KNavBarHeight (KiPhoneXSeries ? 88 : 64)
 #define KTopHeight   (KiPhoneXSeries ? 24.f:0.f)
-#define KTabBarHeight   (KiPhoneXSeries ? 15.f:0.f)
+#define KTabBarHeight   (KiPhoneXSeries ? 34.f:0.f)
 //是否是iPad
 #define IS_IPAD  ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
 //圆角
