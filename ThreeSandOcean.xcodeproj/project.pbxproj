@@ -41,6 +41,14 @@
 		BFFFF1E52294297C00666AD4 /* TSOFeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFFFF1E42294297C00666AD4 /* TSOFeedbackViewController.m */; };
 		BFFFF1ED229527E900666AD4 /* UIButton+category.m in Sources */ = {isa = PBXBuildFile; fileRef = BFFFF1EC229527E900666AD4 /* UIButton+category.m */; };
 		BFFFF1EF22952D2C00666AD4 /* fish.gif in Resources */ = {isa = PBXBuildFile; fileRef = BFFFF1EE22952D2C00666AD4 /* fish.gif */; };
+		BFFFF1F2229655F800666AD4 /* TSOFeedMachineCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BFFFF1F1229655F800666AD4 /* TSOFeedMachineCollectionViewCell.m */; };
+		BFFFF1F52296575D00666AD4 /* TSOFeedManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFFFF1F42296575D00666AD4 /* TSOFeedManagerViewController.m */; };
+		BFFFF1F82296748400666AD4 /* TSOFeedDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFFFF1F72296748400666AD4 /* TSOFeedDetailViewController.m */; };
+		BFFFF1FE2296972D00666AD4 /* TSOFeedHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFFFF1FD2296972D00666AD4 /* TSOFeedHistoryViewController.m */; };
+		BFFFF2012296994800666AD4 /* TSOFeedHistoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BFFFF2002296994800666AD4 /* TSOFeedHistoryTableViewCell.m */; };
+		BFFFF2042296ADB700666AD4 /* TSOEnvironmentManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFFFF2032296ADB700666AD4 /* TSOEnvironmentManagerViewController.m */; };
+		BFFFF2072297D7FF00666AD4 /* TSOLogMessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = BFFFF2062297D7FF00666AD4 /* TSOLogMessageView.m */; };
+		BFFFF20A2298F9D900666AD4 /* TSORegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFFFF2092298F9D900666AD4 /* TSORegisterViewController.m */; };
 		D5EBA5DDF5A51EAB18F071CD /* libPods-ThreeSandOcean.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FA82C7D5427BEBFFA888139 /* libPods-ThreeSandOcean.a */; };
 /* End PBXBuildFile section */
 
@@ -135,6 +143,22 @@
 		BFFFF1EB229527E900666AD4 /* UIButton+category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+category.h"; sourceTree = "<group>"; };
 		BFFFF1EC229527E900666AD4 /* UIButton+category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+category.m"; sourceTree = "<group>"; };
 		BFFFF1EE22952D2C00666AD4 /* fish.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = fish.gif; sourceTree = "<group>"; };
+		BFFFF1F0229655F800666AD4 /* TSOFeedMachineCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSOFeedMachineCollectionViewCell.h; sourceTree = "<group>"; };
+		BFFFF1F1229655F800666AD4 /* TSOFeedMachineCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TSOFeedMachineCollectionViewCell.m; sourceTree = "<group>"; };
+		BFFFF1F32296575D00666AD4 /* TSOFeedManagerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSOFeedManagerViewController.h; sourceTree = "<group>"; };
+		BFFFF1F42296575D00666AD4 /* TSOFeedManagerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TSOFeedManagerViewController.m; sourceTree = "<group>"; };
+		BFFFF1F62296748400666AD4 /* TSOFeedDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSOFeedDetailViewController.h; sourceTree = "<group>"; };
+		BFFFF1F72296748400666AD4 /* TSOFeedDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TSOFeedDetailViewController.m; sourceTree = "<group>"; };
+		BFFFF1FC2296972D00666AD4 /* TSOFeedHistoryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSOFeedHistoryViewController.h; sourceTree = "<group>"; };
+		BFFFF1FD2296972D00666AD4 /* TSOFeedHistoryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TSOFeedHistoryViewController.m; sourceTree = "<group>"; };
+		BFFFF1FF2296994800666AD4 /* TSOFeedHistoryTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSOFeedHistoryTableViewCell.h; sourceTree = "<group>"; };
+		BFFFF2002296994800666AD4 /* TSOFeedHistoryTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TSOFeedHistoryTableViewCell.m; sourceTree = "<group>"; };
+		BFFFF2022296ADB700666AD4 /* TSOEnvironmentManagerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSOEnvironmentManagerViewController.h; sourceTree = "<group>"; };
+		BFFFF2032296ADB700666AD4 /* TSOEnvironmentManagerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TSOEnvironmentManagerViewController.m; sourceTree = "<group>"; };
+		BFFFF2052297D7FF00666AD4 /* TSOLogMessageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSOLogMessageView.h; sourceTree = "<group>"; };
+		BFFFF2062297D7FF00666AD4 /* TSOLogMessageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TSOLogMessageView.m; sourceTree = "<group>"; };
+		BFFFF2082298F9D900666AD4 /* TSORegisterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSORegisterViewController.h; sourceTree = "<group>"; };
+		BFFFF2092298F9D900666AD4 /* TSORegisterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TSORegisterViewController.m; sourceTree = "<group>"; };
 		E9F4658823746F7C218C944F /* Pods-ThreeSandOcean.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThreeSandOcean.release.xcconfig"; path = "Target Support Files/Pods-ThreeSandOcean/Pods-ThreeSandOcean.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -222,6 +246,8 @@
 				BF023242228BCD180017DAC0 /* TSOWelcomeViewController.m */,
 				BF02324D228C1E2A0017DAC0 /* TSOLoginViewController.h */,
 				BF02324E228C1E2A0017DAC0 /* TSOLoginViewController.m */,
+				BFFFF2082298F9D900666AD4 /* TSORegisterViewController.h */,
+				BFFFF2092298F9D900666AD4 /* TSORegisterViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -306,6 +332,14 @@
 			children = (
 				BF023270228D4DB70017DAC0 /* TSOFisheryViewController.h */,
 				BF023271228D4DB70017DAC0 /* TSOFisheryViewController.m */,
+				BFFFF1F32296575D00666AD4 /* TSOFeedManagerViewController.h */,
+				BFFFF1F42296575D00666AD4 /* TSOFeedManagerViewController.m */,
+				BFFFF1F62296748400666AD4 /* TSOFeedDetailViewController.h */,
+				BFFFF1F72296748400666AD4 /* TSOFeedDetailViewController.m */,
+				BFFFF1FC2296972D00666AD4 /* TSOFeedHistoryViewController.h */,
+				BFFFF1FD2296972D00666AD4 /* TSOFeedHistoryViewController.m */,
+				BFFFF2022296ADB700666AD4 /* TSOEnvironmentManagerViewController.h */,
+				BFFFF2032296ADB700666AD4 /* TSOEnvironmentManagerViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -313,6 +347,12 @@
 		BF023262228D4C040017DAC0 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BFFFF1F0229655F800666AD4 /* TSOFeedMachineCollectionViewCell.h */,
+				BFFFF1F1229655F800666AD4 /* TSOFeedMachineCollectionViewCell.m */,
+				BFFFF1FF2296994800666AD4 /* TSOFeedHistoryTableViewCell.h */,
+				BFFFF2002296994800666AD4 /* TSOFeedHistoryTableViewCell.m */,
+				BFFFF2052297D7FF00666AD4 /* TSOLogMessageView.h */,
+				BFFFF2062297D7FF00666AD4 /* TSOLogMessageView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -679,8 +719,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF02323F228BBB600017DAC0 /* BaseViewController.m in Sources */,
+				BFFFF1F82296748400666AD4 /* TSOFeedDetailViewController.m in Sources */,
+				BFFFF20A2298F9D900666AD4 /* TSORegisterViewController.m in Sources */,
 				BF023243228BCD180017DAC0 /* TSOWelcomeViewController.m in Sources */,
 				BF4CDC442286D3DA00178BB8 /* main.m in Sources */,
+				BFFFF2012296994800666AD4 /* TSOFeedHistoryTableViewCell.m in Sources */,
 				BF02324F228C1E2A0017DAC0 /* TSOLoginViewController.m in Sources */,
 				BFFFF1DF2293FFB400666AD4 /* TSOMonitoringHeaderCollectionReusableView.m in Sources */,
 				BF023287228EB8510017DAC0 /* TSOMoreListView.m in Sources */,
@@ -688,11 +731,14 @@
 				BF02324A228BF64F0017DAC0 /* TSOWelcomeView.m in Sources */,
 				BFFFF1DC2293FA5D00666AD4 /* TSOMonitoringCollectionViewCell.m in Sources */,
 				BF023275228D4E050017DAC0 /* TSOBreedAquaticsViewController.m in Sources */,
+				BFFFF2072297D7FF00666AD4 /* TSOLogMessageView.m in Sources */,
 				BF023255228D3E200017DAC0 /* BaseNavViewController.m in Sources */,
+				BFFFF2042296ADB700666AD4 /* TSOEnvironmentManagerViewController.m in Sources */,
 				BFFFF1D62293DBB000666AD4 /* TSOBreedAquaticsCollectionViewCell.m in Sources */,
 				BF023252228C3E6D0017DAC0 /* TSOPageControl.m in Sources */,
 				BF74CF4122924F58003B3275 /* TSOPersonInfoViewController.m in Sources */,
 				BF02327B228D4E7D0017DAC0 /* TSOMonitoringViewController.m in Sources */,
+				BFFFF1FE2296972D00666AD4 /* TSOFeedHistoryViewController.m in Sources */,
 				BF0231E5228971790017DAC0 /* UIImage+category.m in Sources */,
 				BF0231E2228926A00017DAC0 /* NSDate+category.m in Sources */,
 				BF023278228D4E3E0017DAC0 /* TSOFeedViewController.m in Sources */,
@@ -704,8 +750,10 @@
 				BF74CF44229257E6003B3275 /* TSOPersonInfoListView.m in Sources */,
 				BF02327E228D4E930017DAC0 /* TSOMineViewController.m in Sources */,
 				BFFFF1E2229423AC00666AD4 /* TSOAboutUsViewController.m in Sources */,
+				BFFFF1F2229655F800666AD4 /* TSOFeedMachineCollectionViewCell.m in Sources */,
 				BF023284228EB77C0017DAC0 /* TSOMoreViewController.m in Sources */,
 				BFFFF1ED229527E900666AD4 /* UIButton+category.m in Sources */,
+				BFFFF1F52296575D00666AD4 /* TSOFeedManagerViewController.m in Sources */,
 				BFFFF1E52294297C00666AD4 /* TSOFeedbackViewController.m in Sources */,
 				BF0231DA228911640017DAC0 /* NSString+category.m in Sources */,
 			);

@@ -7,4 +7,5 @@ pod 'Masonry'
 pod 'SDWebImage'
 pod 'MJExtension', '~> 3.0.15'
 pod 'MJRefresh'
+pod 'SDWebImage'
 end

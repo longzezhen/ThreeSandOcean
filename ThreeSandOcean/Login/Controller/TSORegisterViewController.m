@@ -1,50 +1,36 @@
 //
-//  TSOLoginViewController.m
+//  TSORegisterViewController.m
 //  ThreeSandOcean
 //
-//  Created by 龙泽桢 on 2019/5/15.
+//  Created by 龙泽桢 on 2019/5/25.
 //  Copyright © 2019 tools. All rights reserved.
 //
 
-#import "TSOLoginViewController.h"
 #import "TSORegisterViewController.h"
-@interface TSOLoginViewController ()<UITextFieldDelegate>
-@property (nonatomic,strong)UIImageView * logoImageView;
-@property (nonatomic,strong)UITextField * phoneTextField;
-@property (nonatomic,strong)UITextField * passwordTextField;
-@property (nonatomic,strong)UIButton * loginButton;
-@property (nonatomic,strong)UIButton * forgotButton;
-@property (nonatomic,strong)UIButton * registerButton;
 
+@interface TSORegisterViewController ()<UITextFieldDelegate>
+@property (nonatomic,strong) UIImageView * logoImageView;
+@property (nonatomic,strong) UITextField * phoneTextField;
+@property (nonatomic,strong) UITextField * codeTextField;
+@property (nonatomic,strong) UITextField * passwordTextField;
+@property (nonatomic,strong) UIButton * registerButton;
 @end
 
-@implementation TSOLoginViewController
+@implementation TSORegisterViewController
 #pragma mark - lifeCycle
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self initView];
 }
 
--(void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-    self.navigationController.navigationBarHidden = YES;
-}
-
--(void)viewWillDisappear:(BOOL)animated
-{
-    [super viewWillDisappear:animated];
-    self.navigationController.navigationBarHidden = NO;
-}
-
 #pragma mark - private
 -(void)initView
 {
+    self.title = @"注册";
+    [self goBackBarButton];
     self.logoImageView.hidden = NO;
     self.phoneTextField.hidden = NO;
     self.passwordTextField.hidden = NO;
-    self.loginButton.hidden = NO;
-    self.forgotButton.hidden = NO;
     self.registerButton.hidden = NO;
 }
 
@@ -53,6 +39,7 @@
 {
     END_EDITING;
 }
+
 
 -(void)clickEyeButton:(UIButton*)sender
 {
@@ -64,33 +51,15 @@
     }
 }
 
--(void)clickLoginButton
-{
-    [AppDelegate startMainViewController];
-}
-
--(void)clickForgotButton
+-(void)clickRegisterButton
 {
     
 }
 
--(void)clickRegisterButton
+-(void)clickCodeButton:(UIButton*)sender
 {
-    TSORegisterViewController * vc = [[TSORegisterViewController alloc] init];
-    [self.navigationController pushViewController:vc animated:YES];
+    [self startCountDownWithButton:sender];
 }
-
-#pragma mark - UITextFieldDelegate
-- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
-{
-    return YES;
-}
-
-- (BOOL)textFieldShouldReturn:(UITextField *)textField
-{
-    return YES;
-}
-
 
 #pragma mark - get
 -(UIImageView*)logoImageView
@@ -101,7 +70,7 @@
         [self.view addSubview:_logoImageView];
         [_logoImageView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.centerX.mas_equalTo(0);
-            make.top.mas_equalTo(Auto_Height(139));
+            make.top.mas_equalTo(Auto_Height(35));
             make.size.mas_equalTo(CGSizeMake(Auto_Width(84), Auto_Width(84)));
         }];
     }
@@ -114,7 +83,7 @@
         _phoneTextField = [[UITextField alloc] init];
         _phoneTextField.textColor = ColorFromRGB(0xC7C7CD);
         _phoneTextField.font = KFont(18);
-        _phoneTextField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"请输入手机号/账号" attributes:@{NSForegroundColorAttributeName:ColorFromRGB(0xC7C7CD),NSFontAttributeName:KFont(14)}];
+        _phoneTextField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"请输入手机号" attributes:@{NSForegroundColorAttributeName:ColorFromRGB(0xC7C7CD),NSFontAttributeName:KFont(14)}];
         _phoneTextField.returnKeyType = UIReturnKeyDone;
         _phoneTextField.keyboardType = UIKeyboardTypePhonePad;
         _phoneTextField.tintColor = ColorFromRGB(0x5979FC);
@@ -158,17 +127,76 @@
         }];
         
         _phoneTextField.clearButtonMode = UITextFieldViewModeWhileEditing;
-//        UIButton *clean = [_phoneTextField valueForKey:@"_clearButton"]; //key是固定的
-//        [clean setImage:[UIImage imageNamed:@"textfile_delete"] forState:UIControlStateNormal];
+        //        UIButton *clean = [_phoneTextField valueForKey:@"_clearButton"]; //key是固定的
+        //        [clean setImage:[UIImage imageNamed:@"textfile_delete"] forState:UIControlStateNormal];
     }
     return _phoneTextField;
+}
+
+-(UITextField *)codeTextField
+{
+    if (!_codeTextField) {
+        _codeTextField = [[UITextField alloc] init];
+        _codeTextField.textColor = ColorFromRGB(0xC7C7CD);
+        _codeTextField.font = KFont(18);
+        _codeTextField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"请输入验证码" attributes:@{NSForegroundColorAttributeName:ColorFromRGB(0xC7C7CD),NSFontAttributeName:KFont(14)}];
+        _codeTextField.returnKeyType = UIReturnKeyDone;
+        _codeTextField.keyboardType = UIKeyboardTypePhonePad;
+        _codeTextField.tintColor = ColorFromRGB(0x5979FC);
+        _codeTextField.delegate = self;
+        
+        UIView * leftView = [UIView new];
+        leftView.frame = CGRectMake(0, 0, 35, 0);
+        UIImageView * imageView = [[UIImageView alloc] initWithImage:ImageNamed(@"register_code")];
+        [leftView addSubview:imageView];
+        [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.mas_equalTo(0);
+            make.centerY.mas_equalTo(0);
+            make.size.mas_equalTo(CGSizeMake(15, 20));
+        }];
+        _codeTextField.leftView = leftView;
+        _codeTextField.leftViewMode = UITextFieldViewModeAlways;
+        
+        UIButton * rightButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        rightButton.frame = CGRectMake(0, 0, 90, 30);
+        LayerMakeCorner(rightButton, 5);
+        rightButton.backgroundColor = ColorFromRGB(0x5979FC);
+        [rightButton setTitle:@"获取验证码" forState:UIControlStateNormal];
+        [rightButton setTitleColor:ColorFromRGB(0xFFFFFF) forState:UIControlStateNormal];
+        rightButton.titleLabel.font = KFont(12);
+        [rightButton addTarget:self action:@selector(clickCodeButton:) forControlEvents:UIControlEventTouchUpInside];
+        _codeTextField.rightView = rightButton;
+        _codeTextField.rightViewMode = UITextFieldViewModeAlways;
+        
+        [self.view addSubview:_codeTextField];
+        [_codeTextField mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.mas_equalTo(self.phoneTextField.mas_bottom).mas_equalTo(Auto_Height(35));
+            make.left.mas_equalTo(Auto_Width(38));
+            make.size.mas_equalTo(CGSizeMake(KScreenWidth-Auto_Width(76),25));
+        }];
+        
+        UIView * bottomLineView = [UIView new];
+        bottomLineView.backgroundColor = ColorFromRGB(0xF5F5F5);
+        [self.view addSubview:bottomLineView];
+        [bottomLineView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.mas_equalTo(Auto_Width(57));
+            make.right.mas_equalTo(-Auto_Width(38));
+            make.top.mas_equalTo(_codeTextField.mas_bottom).mas_equalTo(18);
+            make.height.mas_equalTo(1);
+        }];
+        
+        _codeTextField.clearButtonMode = UITextFieldViewModeWhileEditing;
+        //        UIButton *clean = [_phoneTextField valueForKey:@"_clearButton"]; //key是固定的
+        //        [clean setImage:[UIImage imageNamed:@"textfile_delete"] forState:UIControlStateNormal];
+    }
+    return _codeTextField;
 }
 
 -(UITextField *)passwordTextField
 {
     if (!_passwordTextField) {
         _passwordTextField = [[UITextField alloc] init];
-        //_phoneTextField.textColor = ColorFromRGB(0xC7C7CD);
+        _passwordTextField.textColor = ColorFromRGB(0xC7C7CD);
         _passwordTextField.font = KFont(18);
         _passwordTextField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"请输入密码" attributes:@{NSForegroundColorAttributeName:ColorFromRGB(0xC7C7CD),NSFontAttributeName:KFont(14)}];
         _passwordTextField.returnKeyType = UIReturnKeyDone;
@@ -198,7 +226,7 @@
         
         [self.view addSubview:_passwordTextField];
         [_passwordTextField mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.mas_equalTo(self.phoneTextField.mas_bottom).mas_equalTo(Auto_Height(35));
+            make.top.mas_equalTo(self.codeTextField.mas_bottom).mas_equalTo(Auto_Height(35));
             make.left.mas_equalTo(Auto_Width(38));
             make.size.mas_equalTo(CGSizeMake(KScreenWidth-Auto_Width(76),25));
         }];
@@ -220,57 +248,21 @@
     return _passwordTextField;
 }
 
--(UIButton *)loginButton
-{
-    if (!_loginButton) {
-        _loginButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_loginButton setBackgroundColor:ColorFromRGB(0x5979FC)];
-        [_loginButton setTitle:@"登录" forState:UIControlStateNormal];
-        [_loginButton setTitleColor:ColorFromRGB(0xFEFEFE) forState:UIControlStateNormal];
-        _loginButton.titleLabel.font = KFont(18);
-        LayerMakeCorner(_loginButton, 8);
-        [_loginButton addTarget:self action:@selector(clickLoginButton) forControlEvents:UIControlEventTouchUpInside];
-        [self.view addSubview:_loginButton];
-        [_loginButton mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.mas_equalTo(self.passwordTextField.mas_bottom).mas_equalTo(Auto_Height(40));
-            make.left.mas_equalTo(Auto_Width(32));
-            make.size.mas_equalTo(CGSizeMake(KScreenWidth-Auto_Width(64), Auto_Width(45)));
-        }];
-    }
-    return _loginButton;
-}
-
--(UIButton *)forgotButton
-{
-    if (!_forgotButton) {
-        _forgotButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_forgotButton setTitle:@"忘记密码?" forState:UIControlStateNormal];
-        [_forgotButton setTitleColor:ColorFromRGB(0xC7C7CD) forState:UIControlStateNormal];
-        _forgotButton.titleLabel.font = KFont(13);
-        [_forgotButton addTarget:self action:@selector(clickForgotButton) forControlEvents:UIControlEventTouchUpInside];
-        [self.view addSubview:_forgotButton];
-        [_forgotButton mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.mas_equalTo(self.loginButton.mas_bottom).mas_equalTo(Auto_Height(12));
-            make.right.mas_equalTo(-Auto_Width(30));
-            make.size.mas_equalTo(CGSizeMake(65, 13));
-        }];
-    }
-    return _forgotButton;
-}
-
 -(UIButton *)registerButton
 {
     if (!_registerButton) {
         _registerButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_registerButton setBackgroundColor:ColorFromRGB(0x5979FC)];
         [_registerButton setTitle:@"注册" forState:UIControlStateNormal];
-        [_registerButton setTitleColor:ColorFromRGB(0xC7C7CD) forState:UIControlStateNormal];
-        _registerButton.titleLabel.font = KFont(13);
+        [_registerButton setTitleColor:ColorFromRGB(0xFEFEFE) forState:UIControlStateNormal];
+        _registerButton.titleLabel.font = KFont(18);
+        LayerMakeCorner(_registerButton, 8);
         [_registerButton addTarget:self action:@selector(clickRegisterButton) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:_registerButton];
         [_registerButton mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.mas_equalTo(self.loginButton.mas_bottom).mas_equalTo(Auto_Height(12));
-            make.left.mas_equalTo(Auto_Width(30));
-            make.size.mas_equalTo(CGSizeMake(35, 13));
+            make.top.mas_equalTo(self.passwordTextField.mas_bottom).mas_equalTo(Auto_Height(40));
+            make.left.mas_equalTo(Auto_Width(32));
+            make.size.mas_equalTo(CGSizeMake(KScreenWidth-Auto_Width(64), Auto_Width(45)));
         }];
     }
     return _registerButton;

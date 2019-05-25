@@ -25,8 +25,7 @@
 + (void)pushViewController:(UIViewController *)viewController hiddenBottomWhenPush:(BOOL)hiddenBottomWhenPush animation:(BOOL)animation fromNavigation:(UINavigationController *)navi
 {
     viewController.hidesBottomBarWhenPushed = hiddenBottomWhenPush;
-    [navi pushViewController:viewController
-                    animated:animation];
+    [navi pushViewController:viewController animated:animation];
 }
 
 #pragma mark Transition动画
