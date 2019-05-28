@@ -1,4 +1,6 @@
 PODS:
+  - AFNetworkActivityLogger (3.0.0):
+    - AFNetworking/NSURLSession (~> 3.0)
   - AFNetworking (3.2.1):
     - AFNetworking/NSURLSession (= 3.2.1)
     - AFNetworking/Reachability (= 3.2.1)
@@ -14,6 +16,7 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
+  - Bugly (2.5.0)
   - Masonry (1.1.0)
   - MJExtension (3.0.15.1)
   - MJRefresh (3.1.15.7)
@@ -22,7 +25,9 @@ PODS:
   - SDWebImage/Core (4.4.6)
 
 DEPENDENCIES:
+  - AFNetworkActivityLogger
   - AFNetworking
+  - Bugly
   - Masonry
   - MJExtension (~> 3.0.15)
   - MJRefresh
@@ -30,19 +35,23 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - AFNetworkActivityLogger
     - AFNetworking
+    - Bugly
     - Masonry
     - MJExtension
     - MJRefresh
     - SDWebImage
 
 SPEC CHECKSUMS:
+  AFNetworkActivityLogger: e77f68d014becb33c4306a23f56a64906ff72670
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  Bugly: 3ca9f255c01025582df26f9222893b383c7e4b4e
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MJExtension: 19bc33ce2eee2d319760f5622562cf581a6ff756
   MJRefresh: 697f8ec75ebdbe9207767bb682cf0f51b0d8a41f
   SDWebImage: 3f3f0c02f09798048c47a5ed0a13f17b063572d8
 
-PODFILE CHECKSUM: f0227f63a76c03c6e1483b8d850b49070e0818a7
+PODFILE CHECKSUM: d3c48e5db002f79afb09cbcc1395feeb31005292
 
 COCOAPODS: 1.6.1

@@ -25,6 +25,9 @@
 #import <Masonry/Masonry.h>
 #import "AppDelegate.h"
 #import "BaseNavViewController.h"
+#import "AFNetworking.h"
+#import "BaseNetwork.h"
+#import "HttpUrlHeader.h"
 #endif
 
 

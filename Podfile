@@ -8,4 +8,6 @@ pod 'SDWebImage'
 pod 'MJExtension', '~> 3.0.15'
 pod 'MJRefresh'
 pod 'SDWebImage'
+pod 'AFNetworkActivityLogger'
+pod 'Bugly'
 end

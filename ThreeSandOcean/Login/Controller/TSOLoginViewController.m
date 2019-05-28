@@ -46,6 +46,13 @@
     self.loginButton.hidden = NO;
     self.forgotButton.hidden = NO;
     self.registerButton.hidden = NO;
+    
+    [[BaseNetwork shareNetwork] postWithPath:URL_userLogin params:@{@"mobile":@"18682499853",@"password":@"123456"} success:^(NSURLSessionDataTask *task, NSInteger resultCode, id resultObj) {
+        NSLog(@"111");
+    } failure:^(NSError *error) {
+        NSLog(@"222");
+    }];
+    
 }
 
 #pragma mark - action

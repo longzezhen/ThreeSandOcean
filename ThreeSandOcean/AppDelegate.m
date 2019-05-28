@@ -10,6 +10,8 @@
 #import "TSOWelcomeViewController.h"
 #import "TSOLoginViewController.h"
 #import "TSOMainTabBarController.h"
+#import <AFNetworkActivityLogger/AFNetworkActivityLogger.h>
+#import <Bugly/Bugly.h>
 @interface AppDelegate ()
 
 @end
@@ -24,7 +26,7 @@
     [self.window setRootViewController:self.navigationCtrl];
     self.window.backgroundColor = ColorFromRGB(0xFFFFFF);
     [self.window makeKeyAndVisible];
-    
+    //是否进欢迎页面
     if (![[[NSUserDefaults standardUserDefaults] objectForKey:@"notFirstLaunch"] boolValue]) {
         //第一次运行进入欢迎页面
         [[NSUserDefaults standardUserDefaults] setObject:@(1) forKey:@"notFirstLaunch"];
@@ -34,6 +36,15 @@
     }else{
         [AppDelegate startLoginViewController];
     }
+    
+    //日志打印
+    [[AFNetworkActivityLogger sharedLogger] startLogging];
+    [[AFNetworkActivityLogger sharedLogger] setLogLevel:AFLoggerLevelDebug];
+    
+    //bugly集成
+    [Bugly startWithAppId:@"3d10227d36"];
+    
+
     return YES;
 }
 

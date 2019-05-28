@@ -70,4 +70,12 @@
     
     return imageRet;
 }
+
+#pragma mark - 当前应用版本号
++ (NSString *)getSystemVersion
+{
+    NSDictionary *infoDic = [[NSBundle mainBundle] infoDictionary];
+    NSString *currentVersion = [infoDic objectForKey:@"CFBundleShortVersionString"];
+    return currentVersion;
+}
 @end

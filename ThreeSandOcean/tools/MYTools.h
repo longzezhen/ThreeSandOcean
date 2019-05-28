@@ -30,5 +30,8 @@
 
 //view转image
 +(UIImage *)convertViewToImage:(UIView *)view;
+
+//当前应用版本号
++(NSString *)getSystemVersion;
 @end
 
