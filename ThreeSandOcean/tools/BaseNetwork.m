@@ -40,6 +40,30 @@
     }];
 }
 
+//带token的POST
+-(void)postWithPath:(NSString *)path token:(NSString *)token params:(id)params success:(HttpSuccessBlock)success failure:(HttpFailureBlock)failure
+{
+    //将token封装入请求头
+    [self.manager.requestSerializer setValue:token forHTTPHeaderField:@"token"];
+    [self.manager POST:path parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        success(task,[responseObject[@"code"] integerValue],responseObject);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        failure(error);
+    }];
+}
+
+//带token的GET
+- (void)getWithPath:(NSString *)path token:(NSString *)token params:(id)params success:(HttpSuccessBlock)success failure:(HttpFailureBlock)failure
+{
+    //将token封装入请求头
+    [self.manager.requestSerializer setValue:token forHTTPHeaderField:@"token"];
+    [self.manager GET:path parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        success(task,[responseObject[@"code"] integerValue],responseObject);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        failure(error);
+    }];
+}
+
 #pragma mark - get
 -(AFHTTPSessionManager *)manager
 {

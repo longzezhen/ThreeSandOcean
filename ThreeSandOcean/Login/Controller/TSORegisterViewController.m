@@ -7,7 +7,7 @@
 //
 
 #import "TSORegisterViewController.h"
-
+#import "TSOCompleteInfoViewController.h"
 @interface TSORegisterViewController ()<UITextFieldDelegate>
 @property (nonatomic,strong) UIImageView * logoImageView;
 @property (nonatomic,strong) UITextField * phoneTextField;
@@ -53,12 +53,55 @@
 
 -(void)clickRegisterButton
 {
-    
+    if (![MYTools checkTelNumber:self.phoneTextField.text]) {
+        [self.view showTSOtoast:@"请输入正确手机号"];
+        return;
+    }
+
+    if (!self.codeTextField.text.length) {
+        [self.view showTSOtoast:@"请输入验证码"];
+        return;
+    }
+
+    if (!self.passwordTextField.text.length) {
+        [self.view showTSOtoast:@"请输入密码"];
+        return;
+    }
+
+    [[BaseNetwork shareNetwork] postWithPath:URL_UserRegister params:@{@"captcha":self.codeTextField.text,@"mobile":self.phoneTextField.text,@"password":self.passwordTextField.text,@"rePassword":self.passwordTextField.text,@"refereeUserCode":@""} success:^(NSURLSessionDataTask *task, NSInteger resultCode, id resultObj) {
+        if (resultCode == 0) {
+            [self.view showTSOtoast:@"注册成功"];
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                //[self.navigationController popViewControllerAnimated:YES];
+                TSOCompleteInfoViewController * vc = [TSOCompleteInfoViewController new];
+                [self.navigationController pushViewController:vc animated:YES];
+
+            });
+        }else
+        {
+            [self.view showTSOtoast:resultObj[@"message"]];
+        }
+    } failure:^(NSError *error) {
+        [self.view showTSOtoast:@"网络错误"];
+    }];
 }
 
 -(void)clickCodeButton:(UIButton*)sender
 {
+    if (![MYTools checkTelNumber:self.phoneTextField.text]) {
+        [self.view showTSOtoast:@"请输入正确手机号"];
+        return;
+    }
+    
     [self startCountDownWithButton:sender];
+    [[BaseNetwork shareNetwork] postWithPath:URL_sendSmsCodeRegister params:@{@"mobile":self.phoneTextField.text} success:^(NSURLSessionDataTask *task, NSInteger resultCode, id resultObj) {
+        if (resultCode == 0) {
+            
+        }
+    } failure:^(NSError *error) {
+        
+    }];
+    
 }
 
 #pragma mark - get

@@ -44,10 +44,60 @@
     self.backIamgeView.hidden = NO;
     self.feedManagerButton.hidden = NO;
     self.environmentManagerButton.hidden = NO;
-    self.logMegView.hidden = NO;
+    [self initNetcageButton];
+}
+
+-(void)initNetcageButton
+{
+    for (int i=0; i<4;i++) {
+        UIButton * button = [UIButton buttonWithType:UIButtonTypeCustom];
+        [button setImage:ImageNamed(@"netcage_small") forState:UIControlStateNormal];
+        [button addTarget:self action:@selector(clickNetCageButton) forControlEvents:UIControlEventTouchUpInside];
+        [self.view addSubview:button];
+        [button mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.mas_equalTo(Auto_Width(90));
+            make.right.mas_equalTo(Auto_Width(-31-i*52));
+            make.size.mas_equalTo(CGSizeMake(Auto_Width(35), Auto_Width(36)));
+        }];
+    }
+    
+    for (int i=0; i<3; i++) {
+        UIButton * button = [UIButton buttonWithType:UIButtonTypeCustom];
+        [button setImage:ImageNamed(@"netcage_big") forState:UIControlStateNormal];
+        [button addTarget:self action:@selector(clickNetCageButton) forControlEvents:UIControlEventTouchUpInside];
+        [self.view addSubview:button];
+        [button mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.mas_equalTo(Auto_Width(209+116*i));
+            make.right.mas_equalTo(Auto_Width(-41));
+            make.size.mas_equalTo(CGSizeMake(Auto_Width(78), Auto_Width(94)));
+        }];
+    }
+    
+    UIButton * button = [UIButton buttonWithType:UIButtonTypeCustom];
+    [button setImage:ImageNamed(@"netcage_big") forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(clickNetCageButton) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:button];
+    [button mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(Auto_Width(209));
+        make.right.mas_equalTo(Auto_Width(-152));
+        make.size.mas_equalTo(CGSizeMake(Auto_Width(78), Auto_Width(94)));
+    }];
 }
 
 #pragma mark - action
+-(void)clickNetCageButton
+{
+    WEAKSELF;
+    self.logMegView.sureButtonBlock = ^{
+        [weakSelf.logMegView removeFromSuperview];
+        weakSelf.logMegView = nil;
+    };
+    self.logMegView.closeButtonBlock = ^{
+        [weakSelf.logMegView removeFromSuperview];
+        weakSelf.logMegView = nil;
+    };
+}
+
 -(void)clickFeedButton
 {
     TSOFeedManagerViewController * vc = [TSOFeedManagerViewController new];
@@ -146,14 +196,10 @@
 {
     if (!_logMegView) {
         _logMegView = [[TSOLogMessageView alloc] init];
-        _logMegView.sureButtonBlock = ^{
-            [_logMegView removeFromSuperview];
-        };
         LayerMakeCorner(_logMegView, Auto_Width(13));
         [self.view addSubview:_logMegView];
         [_logMegView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.center.mas_equalTo(0);
-            make.size.mas_equalTo(CGSizeMake(Auto_Width(317), Auto_Width(478)));
+            make.edges.mas_equalTo(0);
         }];
     }
     return _logMegView;

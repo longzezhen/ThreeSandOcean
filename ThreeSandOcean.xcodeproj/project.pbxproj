@@ -26,6 +26,9 @@
 		BF023281228D752E0017DAC0 /* TSOMineListView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF023280228D752E0017DAC0 /* TSOMineListView.m */; };
 		BF023284228EB77C0017DAC0 /* TSOMoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF023283228EB77C0017DAC0 /* TSOMoreViewController.m */; };
 		BF023287228EB8510017DAC0 /* TSOMoreListView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF023286228EB8510017DAC0 /* TSOMoreListView.m */; };
+		BF09362122C0F2A5004BC1D5 /* TSOWangXiangListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF09362022C0F2A5004BC1D5 /* TSOWangXiangListViewController.m */; };
+		BF09362422C0F4D1004BC1D5 /* TSOWXListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BF09362322C0F4D1004BC1D5 /* TSOWXListTableViewCell.m */; };
+		BF09362722C360A4004BC1D5 /* TSOCompleteInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF09362622C360A4004BC1D5 /* TSOCompleteInfoViewController.m */; };
 		BF09A9C0229B96BC00CC3A4E /* BaseNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = BF09A9BF229B96BC00CC3A4E /* BaseNetwork.m */; };
 		BF09A9D9229BF52800CC3A4E /* BaseWKWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF09A9D8229BF52800CC3A4E /* BaseWKWebView.m */; };
 		BF4CDC362286D3D800178BB8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BF4CDC352286D3D800178BB8 /* AppDelegate.m */; };
@@ -35,6 +38,10 @@
 		BF4CDC592286D3DA00178BB8 /* ThreeSandOceanUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BF4CDC582286D3DA00178BB8 /* ThreeSandOceanUITests.m */; };
 		BF74CF4122924F58003B3275 /* TSOPersonInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF74CF4022924F57003B3275 /* TSOPersonInfoViewController.m */; };
 		BF74CF44229257E6003B3275 /* TSOPersonInfoListView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF74CF43229257E6003B3275 /* TSOPersonInfoListView.m */; };
+		BF7B5EB022B7C5370035F337 /* UIView+category.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7B5EAF22B7C5370035F337 /* UIView+category.m */; };
+		BF7B5EB822BB3C440035F337 /* TSOForgetPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7B5EB722BB3C440035F337 /* TSOForgetPasswordViewController.m */; };
+		BF7B5ED822BCB7860035F337 /* File.strings in Resources */ = {isa = PBXBuildFile; fileRef = BF7B5EDA22BCB7860035F337 /* File.strings */; };
+		BF866EC422C5B0E200266603 /* fish.gif in Resources */ = {isa = PBXBuildFile; fileRef = BF866EC322C5B0E200266603 /* fish.gif */; };
 		BFFFF1D62293DBB000666AD4 /* TSOBreedAquaticsCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BFFFF1D52293DBB000666AD4 /* TSOBreedAquaticsCollectionViewCell.m */; };
 		BFFFF1D92293EE6100666AD4 /* TSONetcageDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFFFF1D82293EE6100666AD4 /* TSONetcageDetailViewController.m */; };
 		BFFFF1DC2293FA5D00666AD4 /* TSOMonitoringCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BFFFF1DB2293FA5D00666AD4 /* TSOMonitoringCollectionViewCell.m */; };
@@ -42,7 +49,6 @@
 		BFFFF1E2229423AC00666AD4 /* TSOAboutUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFFFF1E1229423AC00666AD4 /* TSOAboutUsViewController.m */; };
 		BFFFF1E52294297C00666AD4 /* TSOFeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFFFF1E42294297C00666AD4 /* TSOFeedbackViewController.m */; };
 		BFFFF1ED229527E900666AD4 /* UIButton+category.m in Sources */ = {isa = PBXBuildFile; fileRef = BFFFF1EC229527E900666AD4 /* UIButton+category.m */; };
-		BFFFF1EF22952D2C00666AD4 /* fish.gif in Resources */ = {isa = PBXBuildFile; fileRef = BFFFF1EE22952D2C00666AD4 /* fish.gif */; };
 		BFFFF1F2229655F800666AD4 /* TSOFeedMachineCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BFFFF1F1229655F800666AD4 /* TSOFeedMachineCollectionViewCell.m */; };
 		BFFFF1F52296575D00666AD4 /* TSOFeedManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFFFF1F42296575D00666AD4 /* TSOFeedManagerViewController.m */; };
 		BFFFF1F82296748400666AD4 /* TSOFeedDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFFFF1F72296748400666AD4 /* TSOFeedDetailViewController.m */; };
@@ -113,6 +119,12 @@
 		BF023283228EB77C0017DAC0 /* TSOMoreViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TSOMoreViewController.m; sourceTree = "<group>"; };
 		BF023285228EB8510017DAC0 /* TSOMoreListView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSOMoreListView.h; sourceTree = "<group>"; };
 		BF023286228EB8510017DAC0 /* TSOMoreListView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TSOMoreListView.m; sourceTree = "<group>"; };
+		BF09361F22C0F2A5004BC1D5 /* TSOWangXiangListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSOWangXiangListViewController.h; sourceTree = "<group>"; };
+		BF09362022C0F2A5004BC1D5 /* TSOWangXiangListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TSOWangXiangListViewController.m; sourceTree = "<group>"; };
+		BF09362222C0F4D1004BC1D5 /* TSOWXListTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSOWXListTableViewCell.h; sourceTree = "<group>"; };
+		BF09362322C0F4D1004BC1D5 /* TSOWXListTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TSOWXListTableViewCell.m; sourceTree = "<group>"; };
+		BF09362522C360A4004BC1D5 /* TSOCompleteInfoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSOCompleteInfoViewController.h; sourceTree = "<group>"; };
+		BF09362622C360A4004BC1D5 /* TSOCompleteInfoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TSOCompleteInfoViewController.m; sourceTree = "<group>"; };
 		BF09A9BE229B96BC00CC3A4E /* BaseNetwork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseNetwork.h; sourceTree = "<group>"; };
 		BF09A9BF229B96BC00CC3A4E /* BaseNetwork.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseNetwork.m; sourceTree = "<group>"; };
 		BF09A9D6229BF12B00CC3A4E /* HttpUrlHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HttpUrlHeader.h; sourceTree = "<group>"; };
@@ -135,6 +147,13 @@
 		BF74CF4022924F57003B3275 /* TSOPersonInfoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TSOPersonInfoViewController.m; sourceTree = "<group>"; };
 		BF74CF42229257E6003B3275 /* TSOPersonInfoListView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSOPersonInfoListView.h; sourceTree = "<group>"; };
 		BF74CF43229257E6003B3275 /* TSOPersonInfoListView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TSOPersonInfoListView.m; sourceTree = "<group>"; };
+		BF7B5EAE22B7C5370035F337 /* UIView+category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+category.h"; sourceTree = "<group>"; };
+		BF7B5EAF22B7C5370035F337 /* UIView+category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+category.m"; sourceTree = "<group>"; };
+		BF7B5EB622BB3C440035F337 /* TSOForgetPasswordViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSOForgetPasswordViewController.h; sourceTree = "<group>"; };
+		BF7B5EB722BB3C440035F337 /* TSOForgetPasswordViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TSOForgetPasswordViewController.m; sourceTree = "<group>"; };
+		BF7B5ED922BCB7860035F337 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/File.strings; sourceTree = "<group>"; };
+		BF7B5EDB22BCB7A50035F337 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/File.strings"; sourceTree = "<group>"; };
+		BF866EC322C5B0E200266603 /* fish.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = fish.gif; sourceTree = "<group>"; };
 		BFFFF1D42293DBB000666AD4 /* TSOBreedAquaticsCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSOBreedAquaticsCollectionViewCell.h; sourceTree = "<group>"; };
 		BFFFF1D52293DBB000666AD4 /* TSOBreedAquaticsCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TSOBreedAquaticsCollectionViewCell.m; sourceTree = "<group>"; };
 		BFFFF1D72293EE6100666AD4 /* TSONetcageDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSONetcageDetailViewController.h; sourceTree = "<group>"; };
@@ -149,7 +168,6 @@
 		BFFFF1E42294297C00666AD4 /* TSOFeedbackViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TSOFeedbackViewController.m; sourceTree = "<group>"; };
 		BFFFF1EB229527E900666AD4 /* UIButton+category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+category.h"; sourceTree = "<group>"; };
 		BFFFF1EC229527E900666AD4 /* UIButton+category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+category.m"; sourceTree = "<group>"; };
-		BFFFF1EE22952D2C00666AD4 /* fish.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = fish.gif; sourceTree = "<group>"; };
 		BFFFF1F0229655F800666AD4 /* TSOFeedMachineCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSOFeedMachineCollectionViewCell.h; sourceTree = "<group>"; };
 		BFFFF1F1229655F800666AD4 /* TSOFeedMachineCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TSOFeedMachineCollectionViewCell.m; sourceTree = "<group>"; };
 		BFFFF1F32296575D00666AD4 /* TSOFeedManagerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSOFeedManagerViewController.h; sourceTree = "<group>"; };
@@ -215,7 +233,7 @@
 		BF0231DC228911BB0017DAC0 /* tools */ = {
 			isa = PBXGroup;
 			children = (
-				BFFFF1EE22952D2C00666AD4 /* fish.gif */,
+				BF866EC322C5B0E200266603 /* fish.gif */,
 				BF4CDC672286DAA900178BB8 /* LYHPrefixHeader.pch */,
 				BF023240228BBFAE0017DAC0 /* WholeSituation.h */,
 				BF09A9D6229BF12B00CC3A4E /* HttpUrlHeader.h */,
@@ -237,6 +255,8 @@
 				BF09A9BF229B96BC00CC3A4E /* BaseNetwork.m */,
 				BF09A9D7229BF52800CC3A4E /* BaseWKWebView.h */,
 				BF09A9D8229BF52800CC3A4E /* BaseWKWebView.m */,
+				BF7B5EAE22B7C5370035F337 /* UIView+category.h */,
+				BF7B5EAF22B7C5370035F337 /* UIView+category.m */,
 			);
 			path = tools;
 			sourceTree = "<group>";
@@ -260,6 +280,10 @@
 				BF02324E228C1E2A0017DAC0 /* TSOLoginViewController.m */,
 				BFFFF2082298F9D900666AD4 /* TSORegisterViewController.h */,
 				BFFFF2092298F9D900666AD4 /* TSORegisterViewController.m */,
+				BF7B5EB622BB3C440035F337 /* TSOForgetPasswordViewController.h */,
+				BF7B5EB722BB3C440035F337 /* TSOForgetPasswordViewController.m */,
+				BF09362522C360A4004BC1D5 /* TSOCompleteInfoViewController.h */,
+				BF09362622C360A4004BC1D5 /* TSOCompleteInfoViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -431,6 +455,8 @@
 			children = (
 				BF023279228D4E7D0017DAC0 /* TSOMonitoringViewController.h */,
 				BF02327A228D4E7D0017DAC0 /* TSOMonitoringViewController.m */,
+				BF09361F22C0F2A5004BC1D5 /* TSOWangXiangListViewController.h */,
+				BF09362022C0F2A5004BC1D5 /* TSOWangXiangListViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -442,6 +468,8 @@
 				BFFFF1DB2293FA5D00666AD4 /* TSOMonitoringCollectionViewCell.m */,
 				BFFFF1DD2293FFB400666AD4 /* TSOMonitoringHeaderCollectionReusableView.h */,
 				BFFFF1DE2293FFB400666AD4 /* TSOMonitoringHeaderCollectionReusableView.m */,
+				BF09362222C0F4D1004BC1D5 /* TSOWXListTableViewCell.h */,
+				BF09362322C0F4D1004BC1D5 /* TSOWXListTableViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -528,6 +556,7 @@
 				BF02325A228D44A30017DAC0 /* TSOMainTabBarController.m */,
 				BF4CDC3D2286D3DA00178BB8 /* Assets.xcassets */,
 				BF4CDC422286D3DA00178BB8 /* Info.plist */,
+				BF7B5EDA22BCB7860035F337 /* File.strings */,
 				BF4CDC432286D3DA00178BB8 /* main.m */,
 				BF023247228BF5B30017DAC0 /* Supporting Files */,
 			);
@@ -640,6 +669,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = BF4CDC282286D3D800178BB8;
 			productRefGroup = BF4CDC322286D3D800178BB8 /* Products */;
@@ -658,8 +688,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BFFFF1EF22952D2C00666AD4 /* fish.gif in Resources */,
 				BF4CDC3E2286D3DA00178BB8 /* Assets.xcassets in Resources */,
+				BF866EC422C5B0E200266603 /* fish.gif in Resources */,
+				BF7B5ED822BCB7860035F337 /* File.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -690,12 +721,14 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-ThreeSandOcean/Pods-ThreeSandOcean-resources.sh",
 				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/iOS-Echarts/iOS-Echarts.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/iOS-Echarts.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -749,6 +782,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF02323F228BBB600017DAC0 /* BaseViewController.m in Sources */,
+				BF7B5EB822BB3C440035F337 /* TSOForgetPasswordViewController.m in Sources */,
+				BF09362122C0F2A5004BC1D5 /* TSOWangXiangListViewController.m in Sources */,
+				BF09362422C0F4D1004BC1D5 /* TSOWXListTableViewCell.m in Sources */,
 				BFFFF1F82296748400666AD4 /* TSOFeedDetailViewController.m in Sources */,
 				BFFFF20A2298F9D900666AD4 /* TSORegisterViewController.m in Sources */,
 				BF023243228BCD180017DAC0 /* TSOWelcomeViewController.m in Sources */,
@@ -757,6 +793,7 @@
 				BF02324F228C1E2A0017DAC0 /* TSOLoginViewController.m in Sources */,
 				BFFFF1DF2293FFB400666AD4 /* TSOMonitoringHeaderCollectionReusableView.m in Sources */,
 				BF023287228EB8510017DAC0 /* TSOMoreListView.m in Sources */,
+				BF7B5EB022B7C5370035F337 /* UIView+category.m in Sources */,
 				BF02325B228D44A30017DAC0 /* TSOMainTabBarController.m in Sources */,
 				BF02324A228BF64F0017DAC0 /* TSOWelcomeView.m in Sources */,
 				BFFFF1DC2293FA5D00666AD4 /* TSOMonitoringCollectionViewCell.m in Sources */,
@@ -773,6 +810,7 @@
 				BF0231E5228971790017DAC0 /* UIImage+category.m in Sources */,
 				BF0231E2228926A00017DAC0 /* NSDate+category.m in Sources */,
 				BF023278228D4E3E0017DAC0 /* TSOFeedViewController.m in Sources */,
+				BF09362722C360A4004BC1D5 /* TSOCompleteInfoViewController.m in Sources */,
 				BF023281228D752E0017DAC0 /* TSOMineListView.m in Sources */,
 				BF0231DB228911640017DAC0 /* MYTools.m in Sources */,
 				BF4CDC362286D3D800178BB8 /* AppDelegate.m in Sources */,
@@ -822,11 +860,24 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		BF7B5EDA22BCB7860035F337 /* File.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF7B5ED922BCB7860035F337 /* en */,
+				BF7B5EDB22BCB7A50035F337 /* zh-Hans */,
+			);
+			name = File.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		BF4CDC5B2286D3DA00178BB8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -886,6 +937,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -940,6 +992,7 @@
 			baseConfigurationReference = 02094F273CD0C2396BA247F8 /* Pods-ThreeSandOcean.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 64993232M7;
@@ -953,6 +1006,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = tools.ThreeSandOcean;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				WARNING_CFLAGS = "-Wno-implicit-retain-self";
 			};
 			name = Debug;
 		};
@@ -961,6 +1015,7 @@
 			baseConfigurationReference = E9F4658823746F7C218C944F /* Pods-ThreeSandOcean.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 64993232M7;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;

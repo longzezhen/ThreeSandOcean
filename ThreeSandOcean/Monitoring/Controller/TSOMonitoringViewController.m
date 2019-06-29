@@ -9,6 +9,7 @@
 #import "TSOMonitoringViewController.h"
 #import "TSOMonitoringCollectionViewCell.h"
 #import "TSOMonitoringHeaderCollectionReusableView.h"
+#import "TSOWangXiangListViewController.h"
 @interface TSOMonitoringViewController ()<UICollectionViewDelegate,UICollectionViewDataSource>
 @property (nonatomic,strong)UICollectionView * collectionView;
 @end
@@ -95,7 +96,8 @@
     if (indexPath.section == 0) {
         reusableView.titleLabel.text = @"网箱监控";
         reusableView.clickMoreButtonBlock = ^{
-            NSLog(@"网箱监控");
+            TSOWangXiangListViewController * vc = [TSOWangXiangListViewController new];
+            [BaseNavViewController pushViewController:vc hiddenBottomWhenPush:YES animation:YES fromNavigation:self.navigationController];
         };
     }else{
         reusableView.titleLabel.text = @"海箱监控";

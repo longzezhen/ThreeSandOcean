@@ -11,9 +11,13 @@
 #import "TSOPageControl.h"
 @interface TSOWelcomeViewController ()<UIScrollViewDelegate>
 @property (nonatomic,strong) UIScrollView * scrollView;
-@property (nonatomic,strong) TSOWelcomeView * firstWelcomeView;
-@property (nonatomic,strong) TSOWelcomeView * secondWelcomeView;
-@property (nonatomic,strong) TSOWelcomeView * thirdWelcomeView;
+//@property (nonatomic,strong) TSOWelcomeView * firstWelcomeView;
+//@property (nonatomic,strong) TSOWelcomeView * secondWelcomeView;
+//@property (nonatomic,strong) TSOWelcomeView * thirdWelcomeView;
+@property (nonatomic,strong) UIImageView * firstWelcomeImageView;
+@property (nonatomic,strong) UIImageView * secondWelcomeImageView;
+@property (nonatomic,strong) UIImageView * thirdWelcomeImageView;
+
 @property (nonatomic,strong) TSOPageControl * pageControl;
 @end
 
@@ -28,9 +32,12 @@
 -(void)initView
 {
     self.scrollView.hidden = NO;
-    self.firstWelcomeView.hidden = NO;
-    self.secondWelcomeView.hidden = NO;
-    self.thirdWelcomeView.hidden = NO;
+    self.firstWelcomeImageView.hidden = NO;
+    self.secondWelcomeImageView.hidden = NO;
+    self.thirdWelcomeImageView.hidden = NO;
+//    self.firstWelcomeView.hidden = NO;
+//    self.secondWelcomeView.hidden = NO;
+//    self.thirdWelcomeView.hidden = NO;
     self.pageControl.hidden = NO;
 }
 
@@ -77,55 +84,62 @@
     return _scrollView;
 }
 
--(TSOWelcomeView *)firstWelcomeView
+//-(TSOWelcomeView *)firstWelcomeView
+//{
+//    if (!_firstWelcomeView) {
+//        _firstWelcomeView = [[TSOWelcomeView alloc] init];
+//        _firstWelcomeView.headImageView.image = ImageNamed(@"welcome_one");
+//        _firstWelcomeView.middleLabel.text = @"养殖生产记录";
+//        _firstWelcomeView.bottomLabel.text = @"科学养殖 增产增收";
+//        [self.scrollView addSubview:_firstWelcomeView];
+//        [_firstWelcomeView mas_makeConstraints:^(MASConstraintMaker *make) {
+//            make.top.mas_equalTo(0);
+//            make.left.mas_equalTo(0);
+//            make.size.mas_equalTo(CGSizeMake(KScreenWidth, KScreenHeight));
+//        }];
+//    }
+//    return _firstWelcomeView;
+//}
+-(UIImageView *)firstWelcomeImageView
 {
-    if (!_firstWelcomeView) {
-        _firstWelcomeView = [[TSOWelcomeView alloc] init];
-        _firstWelcomeView.headImageView.image = ImageNamed(@"welcome_one");
-        _firstWelcomeView.middleLabel.text = @"养殖生产记录";
-        _firstWelcomeView.bottomLabel.text = @"科学养殖 增产增收";
-        [self.scrollView addSubview:_firstWelcomeView];
-        [_firstWelcomeView mas_makeConstraints:^(MASConstraintMaker *make) {
+    if (!_firstWelcomeImageView) {
+        _firstWelcomeImageView = [[UIImageView alloc] initWithImage:ImageNamed(@"welcome_one")];
+        [self.scrollView addSubview:_firstWelcomeImageView];
+        [_firstWelcomeImageView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.mas_equalTo(0);
             make.left.mas_equalTo(0);
             make.size.mas_equalTo(CGSizeMake(KScreenWidth, KScreenHeight));
         }];
     }
-    return _firstWelcomeView;
+    return _firstWelcomeImageView;
 }
 
--(TSOWelcomeView *)secondWelcomeView
+-(UIImageView *)secondWelcomeImageView
 {
-    if (!_secondWelcomeView) {
-        _secondWelcomeView = [[TSOWelcomeView alloc] init];
-        _secondWelcomeView.headImageView.image = ImageNamed(@"welcome_two");
-        _secondWelcomeView.middleLabel.text = @"质量安全追溯";
-        _secondWelcomeView.bottomLabel.text = @"流通千万里 追溯零距离";
-        [self.scrollView addSubview:_secondWelcomeView];
-        [_secondWelcomeView mas_makeConstraints:^(MASConstraintMaker *make) {
+    if (!_secondWelcomeImageView) {
+        _secondWelcomeImageView = [[UIImageView alloc] initWithImage:ImageNamed(@"welcome_two")];
+        [self.scrollView addSubview:_secondWelcomeImageView];
+        [_secondWelcomeImageView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.mas_equalTo(0);
-            make.left.mas_equalTo(self.firstWelcomeView.mas_right).mas_equalTo(0);
+            make.left.mas_equalTo(self.firstWelcomeImageView.mas_right).mas_equalTo(0);
             make.size.mas_equalTo(CGSizeMake(KScreenWidth, KScreenHeight));
         }];
     }
-    return _secondWelcomeView;
+    return _secondWelcomeImageView;
 }
 
--(TSOWelcomeView *)thirdWelcomeView
+-(UIImageView *)thirdWelcomeImageView
 {
-    if (!_thirdWelcomeView) {
-        _thirdWelcomeView = [[TSOWelcomeView alloc] init];
-        _thirdWelcomeView.headImageView.image = ImageNamed(@"welcome_three");
-        _thirdWelcomeView.middleLabel.text = @"企业分布管理";
-        _thirdWelcomeView.bottomLabel.text = @"全地图展现 信息化管理";
-        [self.scrollView addSubview:_thirdWelcomeView];
-        [_thirdWelcomeView mas_makeConstraints:^(MASConstraintMaker *make) {
+    if (!_thirdWelcomeImageView) {
+        _thirdWelcomeImageView = [[UIImageView alloc] initWithImage:ImageNamed(@"welcome_three")];
+        [self.scrollView addSubview:_thirdWelcomeImageView];
+        [_thirdWelcomeImageView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.mas_equalTo(0);
-            make.left.mas_equalTo(self.secondWelcomeView.mas_right).mas_equalTo(0);
+            make.left.mas_equalTo(self.secondWelcomeImageView.mas_right).mas_equalTo(0);
             make.size.mas_equalTo(CGSizeMake(KScreenWidth, KScreenHeight));
             make.right.mas_equalTo(0);
         }];
-        
+        _thirdWelcomeImageView.userInteractionEnabled = YES;
         UIButton * tgButton = [UIButton buttonWithType:UIButtonTypeCustom];
         LayerMakeCorner(tgButton, Auto_Width(18));
         [tgButton setTitle:@"跳过" forState:UIControlStateNormal];
@@ -133,15 +147,65 @@
         tgButton.titleLabel.font = KFont(13);
         tgButton.backgroundColor = ColorFromRGBA(0x000000, 0.2);
         [tgButton addTarget:self action:@selector(clickTgButton) forControlEvents:UIControlEventTouchUpInside];
-        [_thirdWelcomeView addSubview:tgButton];
+        [_thirdWelcomeImageView addSubview:tgButton];
         [tgButton mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.mas_equalTo(Auto_Width(25));
             make.right.mas_equalTo(-Auto_Width(25));
             make.size.mas_equalTo(CGSizeMake(Auto_Width(36), Auto_Width(36)));
         }];
     }
-    return _thirdWelcomeView;
+    return _thirdWelcomeImageView;
 }
+
+
+//-(TSOWelcomeView *)secondWelcomeView
+//{
+//    if (!_secondWelcomeView) {
+//        _secondWelcomeView = [[TSOWelcomeView alloc] init];
+//        _secondWelcomeView.headImageView.image = ImageNamed(@"welcome_two");
+//        _secondWelcomeView.middleLabel.text = @"质量安全追溯";
+//        _secondWelcomeView.bottomLabel.text = @"流通千万里 追溯零距离";
+//        [self.scrollView addSubview:_secondWelcomeView];
+//        [_secondWelcomeView mas_makeConstraints:^(MASConstraintMaker *make) {
+//            make.top.mas_equalTo(0);
+//            make.left.mas_equalTo(self.firstWelcomeView.mas_right).mas_equalTo(0);
+//            make.size.mas_equalTo(CGSizeMake(KScreenWidth, KScreenHeight));
+//        }];
+//    }
+//    return _secondWelcomeView;
+//}
+//
+//-(TSOWelcomeView *)thirdWelcomeView
+//{
+//    if (!_thirdWelcomeView) {
+//        _thirdWelcomeView = [[TSOWelcomeView alloc] init];
+//        _thirdWelcomeView.headImageView.image = ImageNamed(@"welcome_three");
+//        _thirdWelcomeView.middleLabel.text = @"企业分布管理";
+//        _thirdWelcomeView.bottomLabel.text = @"全地图展现 信息化管理";
+//        [self.scrollView addSubview:_thirdWelcomeView];
+//        [_thirdWelcomeView mas_makeConstraints:^(MASConstraintMaker *make) {
+//            make.top.mas_equalTo(0);
+//            make.left.mas_equalTo(self.secondWelcomeView.mas_right).mas_equalTo(0);
+//            make.size.mas_equalTo(CGSizeMake(KScreenWidth, KScreenHeight));
+//            make.right.mas_equalTo(0);
+//        }];
+//
+//        UIButton * tgButton = [UIButton buttonWithType:UIButtonTypeCustom];
+//        LayerMakeCorner(tgButton, Auto_Width(18));
+//        [tgButton setTitle:@"跳过" forState:UIControlStateNormal];
+//        [tgButton setTitleColor:ColorFromRGB(0xFFFFFF) forState:UIControlStateNormal];
+//        tgButton.titleLabel.font = KFont(13);
+//        tgButton.backgroundColor = ColorFromRGBA(0x000000, 0.2);
+//        [tgButton addTarget:self action:@selector(clickTgButton) forControlEvents:UIControlEventTouchUpInside];
+//        [_thirdWelcomeView addSubview:tgButton];
+//        [tgButton mas_makeConstraints:^(MASConstraintMaker *make) {
+//            make.top.mas_equalTo(Auto_Width(25));
+//            make.right.mas_equalTo(-Auto_Width(25));
+//            make.size.mas_equalTo(CGSizeMake(Auto_Width(36), Auto_Width(36)));
+//        }];
+//    }
+//    return _thirdWelcomeView;
+//}
 
 -(TSOPageControl *)pageControl
 {
@@ -150,8 +214,8 @@
         _pageControl.numberOfPages = 3;
         _pageControl.currentPage = 0;
         //将点显示成图片的方法
-        [_pageControl setValue:[UIImage imageNamed:@"welcome_one"] forKeyPath:@"_currentPageImage"];
-        [_pageControl setValue:[UIImage imageNamed:@"left_back"] forKeyPath:@"_pageImage"];
+        [_pageControl setValue:[UIImage imageNamed:@"pageControl_select"] forKeyPath:@"_currentPageImage"];
+        [_pageControl setValue:[UIImage imageNamed:@"pageControl_unselect"] forKeyPath:@"_pageImage"];
         //设置点的颜色的方法
         _pageControl.currentPageIndicatorTintColor = ColorFromRGB(0x6881FD);
         _pageControl.pageIndicatorTintColor = ColorFromRGB(0x6881FD);

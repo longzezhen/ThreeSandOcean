@@ -29,7 +29,8 @@
 #pragma mark - private
 -(void)initView
 {
-    self.title = @"养殖";
+    self.title = @"设备管理";
+    [self goBackBarButton];
     self.collectionView.hidden = NO;
 }
 
@@ -84,7 +85,7 @@
 {
     if (!_collectionView) {
         UICollectionViewFlowLayout * fl = [[UICollectionViewFlowLayout alloc] init];
-        _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, KScreenWidth, KScreenHeight-KNavBarHeight-KTabBarHeight-49) collectionViewLayout:fl];
+        _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, KScreenWidth, KScreenHeight-KNavBarHeight) collectionViewLayout:fl];
         _collectionView.dataSource = self;
         _collectionView.delegate = self;
         _collectionView.backgroundColor = ColorFromRGB(0xFFFFFF);

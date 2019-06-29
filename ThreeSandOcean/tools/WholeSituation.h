@@ -18,8 +18,8 @@
 //是否是x系列手机
 #define KiPhoneXSeries [MYTools iPhoneXSeries]
 #define KNavBarHeight (KiPhoneXSeries ? 88 : 64)
+#define KTabBarHeight   (KiPhoneXSeries ? (34+49):49)
 #define KTopHeight   (KiPhoneXSeries ? 24.f:0.f)
-#define KTabBarHeight   (KiPhoneXSeries ? 34.f:0.f)
 //是否是iPad
 #define IS_IPAD  ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
 //圆角
@@ -56,4 +56,6 @@ alpha:alphaValue]
 #define Auto_Width(a)       (((KScreenWidth)/(375))*(a))
 #define Auto_Height(a)      (((KScreenHeight)/(667))*(a))
 
+//获取登录token
+#define TOKEN    [[NSUserDefaults standardUserDefaults] objectForKey:@"token"]
 

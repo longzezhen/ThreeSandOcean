@@ -28,6 +28,8 @@
 #import "AFNetworking.h"
 #import "BaseNetwork.h"
 #import "HttpUrlHeader.h"
+#import "UIView+Toast.h"
+#import "UIView+category.h"
 #endif
 
 

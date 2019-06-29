@@ -14,6 +14,10 @@
 +(UIImage *)compressImageSize:(UIImage *)image toSize:(CGSize)size;
 //view颜色转image
 + (UIImage *)drawImageWithSize:(CGSize)size color:(UIColor *)color;
+//view转image
++(UIImage *)convertViewToImage:(UIView *)view;
+//生成二维码（中间有图片）
++(UIImage *)createImageQRCodeWithString:(NSString *)QRString centerImage:(UIImage *)centerImage;
 @end
 
 

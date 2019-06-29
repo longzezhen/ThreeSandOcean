@@ -8,6 +8,9 @@
 
 #import "TSOLoginViewController.h"
 #import "TSORegisterViewController.h"
+#import "TSOForgetPasswordViewController.h"
+
+#import "TSOCompleteInfoViewController.h"
 @interface TSOLoginViewController ()<UITextFieldDelegate>
 @property (nonatomic,strong)UIImageView * logoImageView;
 @property (nonatomic,strong)UITextField * phoneTextField;
@@ -47,12 +50,6 @@
     self.forgotButton.hidden = NO;
     self.registerButton.hidden = NO;
     
-    [[BaseNetwork shareNetwork] postWithPath:URL_userLogin params:@{@"mobile":@"18682499853",@"password":@"123456"} success:^(NSURLSessionDataTask *task, NSInteger resultCode, id resultObj) {
-        NSLog(@"111");
-    } failure:^(NSError *error) {
-        NSLog(@"222");
-    }];
-    
 }
 
 #pragma mark - action
@@ -73,12 +70,40 @@
 
 -(void)clickLoginButton
 {
-    [AppDelegate startMainViewController];
+    if (!self.phoneTextField.text.length) {
+        [self.view showTSOtoast:@"请输入账号"];
+        return;
+    }
+    
+    if (!self.passwordTextField.text.length) {
+        [self.view showTSOtoast:@"请输入密码"];
+        return;
+    }
+    [[BaseNetwork shareNetwork] postWithPath:URL_UserLogin params:@{@"mobile":self.phoneTextField.text,@"password":self.passwordTextField.text} success:^(NSURLSessionDataTask *task, NSInteger resultCode, id resultObj) {
+        if (resultCode == 0) {
+            NSString * object = [NSString stringWithFormat:@"%@",resultObj[@"data"][@"token"]];
+            if (object) {
+                [[NSUserDefaults standardUserDefaults] setObject:object forKey:@"token"];
+            }
+            [[NSUserDefaults standardUserDefaults] setObject:self.phoneTextField.text forKey:@"account"];
+            [[NSUserDefaults standardUserDefaults] setObject:self.passwordTextField.text forKey:@"password"];
+            [AppDelegate startMainViewController];
+        }else{
+            [self.view showTSOtoast:resultObj[@"message"]];
+        }
+    } failure:^(NSError *error) {
+        [self.view showTSOtoast:@"网络错误"];
+    }];
+    
+    
 }
 
 -(void)clickForgotButton
 {
-    
+    TSOForgetPasswordViewController * vc = [TSOForgetPasswordViewController new];
+    [self.navigationController pushViewController:vc animated:YES];
+//    TSOCompleteInfoViewController * vc = [TSOCompleteInfoViewController new];
+//    [self.navigationController pushViewController:vc animated:YES];
 }
 
 -(void)clickRegisterButton
@@ -119,7 +144,8 @@
 {
     if (!_phoneTextField) {
         _phoneTextField = [[UITextField alloc] init];
-        _phoneTextField.textColor = ColorFromRGB(0xC7C7CD);
+        _phoneTextField.text = [[NSUserDefaults standardUserDefaults] objectForKey:@"account"];
+        _phoneTextField.textColor = ColorFromRGB(0x000000);
         _phoneTextField.font = KFont(18);
         _phoneTextField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"请输入手机号/账号" attributes:@{NSForegroundColorAttributeName:ColorFromRGB(0xC7C7CD),NSFontAttributeName:KFont(14)}];
         _phoneTextField.returnKeyType = UIReturnKeyDone;
@@ -175,7 +201,8 @@
 {
     if (!_passwordTextField) {
         _passwordTextField = [[UITextField alloc] init];
-        //_phoneTextField.textColor = ColorFromRGB(0xC7C7CD);
+        _passwordTextField.text = [[NSUserDefaults standardUserDefaults] objectForKey:@"password"];
+        _passwordTextField.textColor = ColorFromRGB(0x000000);
         _passwordTextField.font = KFont(18);
         _passwordTextField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"请输入密码" attributes:@{NSForegroundColorAttributeName:ColorFromRGB(0xC7C7CD),NSFontAttributeName:KFont(14)}];
         _passwordTextField.returnKeyType = UIReturnKeyDone;
@@ -252,14 +279,14 @@
     if (!_forgotButton) {
         _forgotButton = [UIButton buttonWithType:UIButtonTypeCustom];
         [_forgotButton setTitle:@"忘记密码?" forState:UIControlStateNormal];
-        [_forgotButton setTitleColor:ColorFromRGB(0xC7C7CD) forState:UIControlStateNormal];
+        [_forgotButton setTitleColor:ColorFromRGB(0x5979FC) forState:UIControlStateNormal];
         _forgotButton.titleLabel.font = KFont(13);
         [_forgotButton addTarget:self action:@selector(clickForgotButton) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:_forgotButton];
         [_forgotButton mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.mas_equalTo(self.loginButton.mas_bottom).mas_equalTo(Auto_Height(12));
             make.right.mas_equalTo(-Auto_Width(30));
-            make.size.mas_equalTo(CGSizeMake(65, 13));
+            make.size.mas_equalTo(CGSizeMake(Auto_Width(59), Auto_Width(13)));
         }];
     }
     return _forgotButton;
@@ -269,15 +296,15 @@
 {
     if (!_registerButton) {
         _registerButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_registerButton setTitle:@"注册" forState:UIControlStateNormal];
-        [_registerButton setTitleColor:ColorFromRGB(0xC7C7CD) forState:UIControlStateNormal];
+        [_registerButton setTitle:@"免费注册" forState:UIControlStateNormal];
+        [_registerButton setTitleColor:ColorFromRGB(0x5979FC) forState:UIControlStateNormal];
         _registerButton.titleLabel.font = KFont(13);
         [_registerButton addTarget:self action:@selector(clickRegisterButton) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:_registerButton];
         [_registerButton mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.mas_equalTo(self.loginButton.mas_bottom).mas_equalTo(Auto_Height(12));
             make.left.mas_equalTo(Auto_Width(30));
-            make.size.mas_equalTo(CGSizeMake(35, 13));
+            make.size.mas_equalTo(CGSizeMake(Auto_Width(52), Auto_Width(13)));
         }];
     }
     return _registerButton;

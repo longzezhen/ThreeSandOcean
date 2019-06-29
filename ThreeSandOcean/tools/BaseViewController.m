@@ -42,7 +42,7 @@
 - (void)goBackBarButton{//返回按钮
     UIButton * leftButton = [UIButton buttonWithType:UIButtonTypeCustom];
     leftButton.frame = CGRectMake(0, 0, 70, 44);
-    leftButton.imageEdgeInsets = UIEdgeInsetsMake(0, -30, 0, 0);
+    leftButton.imageEdgeInsets = UIEdgeInsetsMake(0, -55, 0, 0);
     [leftButton setImage:ImageNamed(@"left_back") forState:UIControlStateNormal];
     [leftButton addTarget:self action:@selector(clickGoBackBarButton) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem * leftItem = [[UIBarButtonItem alloc] initWithCustomView:leftButton];

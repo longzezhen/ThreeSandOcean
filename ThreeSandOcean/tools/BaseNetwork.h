@@ -37,7 +37,19 @@ typedef void(^HttpFailureBlock)(NSError *error);
             success:(HttpSuccessBlock)success
             failure:(HttpFailureBlock)failure;
 
+//带token的POST
+-(void)postWithPath:(NSString *)path
+              token:(NSString *)token
+             params:(id)params
+            success:(HttpSuccessBlock)success
+            failure:(HttpFailureBlock)failure;
 
+//带token的GET
+- (void)getWithPath:(NSString *)path
+              token:(NSString *)token
+             params:(id)params
+            success:(HttpSuccessBlock)success
+            failure:(HttpFailureBlock)failure;
 @end
 
 

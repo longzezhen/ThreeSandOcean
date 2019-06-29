@@ -10,6 +10,7 @@
 #import "TSOMineListView.h"
 #import "TSOMoreViewController.h"
 #import "TSOPersonInfoViewController.h"
+#import "TSOBreedAquaticsViewController.h"
 @interface TSOMineViewController ()
 @property (nonatomic,strong)UIImageView * topBackImageView;
 @property (nonatomic,strong)UILabel * MineLabel;
@@ -48,8 +49,30 @@
 }
 
 #pragma mark - action
--(void)clickCancelButton
+-(void)clickLogoutButton
 {
+    UIAlertController * alertC = [UIAlertController alertControllerWithTitle:nil message:@"确认退出登录？" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction * cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        //[alertC dismissViewControllerAnimated:YES completion:nil];
+    }];
+    UIAlertAction * okAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [[BaseNetwork shareNetwork] getWithPath:URL_Logout token:TOKEN params:nil success:^(NSURLSessionDataTask *task, NSInteger resultCode, id resultObj) {
+            if (resultCode == 0) {
+                [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"token"];
+                [AppDelegate startLoginViewController];
+            }else{
+                [AppDelegate startLoginViewController];
+                [self.view showTSOtoast:resultObj[@"message"]];
+            }
+        } failure:^(NSError *error) {
+            [self.view showTSOtoast:@"网络错误"];
+        }];
+
+    }];
+    
+    [alertC addAction:cancelAction];
+    [alertC addAction:okAction];
+    [self presentViewController:alertC animated:YES completion:nil];
     
 }
 
@@ -169,7 +192,7 @@
         [_cancelButton setTitleColor:ColorFromRGB(0xFFFFFF) forState:UIControlStateNormal];
         _cancelButton.titleLabel.font = KFont(12);
         _cancelButton.backgroundColor = ColorFromRGBA(0xFFFFFF, 0.2);
-        [_cancelButton addTarget:self action:@selector(clickCancelButton) forControlEvents:UIControlEventTouchUpInside];
+        [_cancelButton addTarget:self action:@selector(clickLogoutButton) forControlEvents:UIControlEventTouchUpInside];
         LayerMakeCorner(_cancelButton, 9);
         [self.topBackImageView addSubview:_cancelButton];
         [_cancelButton mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -247,8 +270,10 @@
         _equipmentManagementView = [[TSOMineListView alloc] init];
         _equipmentManagementView.leftImageView.image = ImageNamed(@"mine_equManage");
         _equipmentManagementView.middleLabel.text = @"设备管理";
+        WEAKSELF;
         _equipmentManagementView.clickViewBlock = ^{
-            NSLog(@"equipmentManagementView");
+            TSOBreedAquaticsViewController * vc = [TSOBreedAquaticsViewController new];
+            [BaseNavViewController pushViewController:vc hiddenBottomWhenPush:YES animation:YES fromNavigation:weakSelf.navigationController];
         };
         _equipmentManagementView.bottomLineView.hidden = NO;
         [self.view addSubview:_equipmentManagementView];
@@ -268,9 +293,10 @@
         _moreView = [[TSOMineListView alloc] init];
         _moreView.leftImageView.image = ImageNamed(@"mine_more");
         _moreView.middleLabel.text = @"更多";
+        WEAKSELF;
         _moreView.clickViewBlock = ^{
             TSOMoreViewController * moreVC = [[TSOMoreViewController alloc] init];
-            [BaseNavViewController pushViewController:moreVC hiddenBottomWhenPush:YES animation:YES fromNavigation:self.navigationController];
+            [BaseNavViewController pushViewController:moreVC hiddenBottomWhenPush:YES animation:YES fromNavigation:weakSelf.navigationController];
         };
         _moreView.bottomLineView.hidden = NO;
         [self.view addSubview:_moreView];

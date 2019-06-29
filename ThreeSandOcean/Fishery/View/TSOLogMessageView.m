@@ -9,6 +9,7 @@
 #import "TSOLogMessageView.h"
 @interface TSOLogMessageView()
 @property (nonatomic,strong) UIImageView * backgroundImageView;
+@property (nonatomic,strong) UIButton * closeButton;
 @property (nonatomic,strong) UILabel * numberLabel;
 @property (nonatomic,strong) UILabel * kindLabel;
 @property (nonatomic,strong) UIButton * cattyButton;
@@ -28,6 +29,7 @@
 {
     if (self = [super init]) {
         self.backgroundImageView.hidden = NO;
+        self.closeButton.hidden = NO;
         self.numberLabel.hidden = NO;
         self.kindLabel.hidden = NO;
         self.cattyButton.hidden = NO;
@@ -42,10 +44,16 @@
         self.remarkLabel.hidden = NO;
         self.sureButton.hidden = NO;
     }
+    self.backgroundColor = ColorFromRGBA(0x000000, 0.4);
     return self;
 }
 
 #pragma mark - action
+-(void)clickCloseButton
+{
+    self.closeButtonBlock();
+}
+
 -(void)clickGuigeButton:(UIButton*)sender
 {
     if (sender.selected) {
@@ -84,9 +92,11 @@
     if (!_backgroundImageView) {
         _backgroundImageView = [[UIImageView alloc] init];
         _backgroundImageView.image = ImageNamed(@"log_message_back");
+        _backgroundImageView.userInteractionEnabled = YES;
         [self addSubview:_backgroundImageView];
         [_backgroundImageView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.edges.mas_equalTo(0);
+            make.center.mas_equalTo(0);
+            make.size.mas_equalTo(CGSizeMake(Auto_Width(317), Auto_Width(478)));
         }];
         
         UILabel * label = [UILabel new];
@@ -120,6 +130,22 @@
     return _backgroundImageView;
 }
 
+-(UIButton *)closeButton
+{
+    if (!_closeButton) {
+        _closeButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_closeButton setImage:ImageNamed(@"closeButton") forState:UIControlStateNormal];
+        [_closeButton addTarget:self action:@selector(clickCloseButton) forControlEvents:UIControlEventTouchUpInside];
+        [self.backgroundImageView addSubview:_closeButton];
+        [_closeButton mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.centerX.mas_equalTo(self.backgroundImageView.mas_right);
+            make.centerY.mas_equalTo(self.backgroundImageView.mas_top);
+            make.size.mas_equalTo(CGSizeMake(Auto_Width(30), Auto_Width(30)));
+        }];
+    }
+    return _closeButton;
+}
+
 -(UILabel *)numberLabel
 {
     if (!_numberLabel) {
@@ -127,7 +153,7 @@
         label.text = @"编号:";
         label.textColor = ColorFromRGB(0x666666);
         label.font = KFont(15);
-        [self addSubview:label];
+        [self.backgroundImageView addSubview:label];
         [label mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.mas_equalTo(Auto_Width(128));
             make.left.mas_equalTo(Auto_Width(26));
@@ -137,7 +163,7 @@
         _numberLabel.text = @"1号网箱";
         _numberLabel.textColor = ColorFromRGB(0x6881FD);
         _numberLabel.font = KFont(15);
-        [self addSubview:_numberLabel];
+        [self.backgroundImageView addSubview:_numberLabel];
         [_numberLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.centerY.mas_equalTo(label);
             make.left.mas_equalTo(label.mas_right).mas_equalTo(Auto_Width(17));
@@ -145,7 +171,7 @@
         
         UIView * lineView = [UIView new];
         lineView.backgroundColor = ColorFromRGB(0xEEEEEE);
-        [self addSubview:lineView];
+        [self.backgroundImageView addSubview:lineView];
         [lineView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.mas_equalTo(self->_numberLabel);
             make.top.mas_equalTo(self->_numberLabel.mas_bottom).mas_equalTo(Auto_Width(5));
@@ -164,7 +190,7 @@
         label.text = @"品种:";
         label.textColor = ColorFromRGB(0x666666);
         label.font = KFont(15);
-        [self addSubview:label];
+        [self.backgroundImageView addSubview:label];
         [label mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.mas_equalTo(self.numberLabel.mas_bottom).mas_equalTo(Auto_Width(15));
             make.left.mas_equalTo(Auto_Width(26));
@@ -174,7 +200,7 @@
         _kindLabel.text = @"草鱼";
         _kindLabel.textColor = ColorFromRGB(0x6881FD);
         _kindLabel.font = KFont(15);
-        [self addSubview:_kindLabel];
+        [self.backgroundImageView addSubview:_kindLabel];
         [_kindLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.centerY.mas_equalTo(label);
             make.left.mas_equalTo(label.mas_right).mas_equalTo(Auto_Width(17));
@@ -182,7 +208,7 @@
         
         UIView * lineView = [UIView new];
         lineView.backgroundColor = ColorFromRGB(0xEEEEEE);
-        [self addSubview:lineView];
+        [self.backgroundImageView addSubview:lineView];
         [lineView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.mas_equalTo(self->_kindLabel);
             make.top.mas_equalTo(self->_kindLabel.mas_bottom).mas_equalTo(Auto_Width(5));
@@ -200,7 +226,7 @@
         label.text = @"规格:";
         label.textColor = ColorFromRGB(0x666666);
         label.font = KFont(15);
-        [self addSubview:label];
+        [self.backgroundImageView addSubview:label];
         [label mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.mas_equalTo(self.kindLabel.mas_bottom).mas_equalTo(Auto_Width(15));
             make.left.mas_equalTo(Auto_Width(26));
@@ -215,7 +241,7 @@
         _cattyButton.tag = 1;
         _cattyButton.selected = YES;
         [_cattyButton addTarget:self action:@selector(clickGuigeButton:) forControlEvents:UIControlEventTouchUpInside];
-        [self addSubview:_cattyButton];
+        [self.backgroundImageView addSubview:_cattyButton];
         [_cattyButton mas_makeConstraints:^(MASConstraintMaker *make) {
             make.centerY.mas_equalTo(label);
             make.left.mas_equalTo(label.mas_right).mas_equalTo(Auto_Width(17));
@@ -236,7 +262,7 @@
         _centimeterButton.titleLabel.font = KFont(15);
         _centimeterButton.tag = 2;
         [_centimeterButton addTarget:self action:@selector(clickGuigeButton:) forControlEvents:UIControlEventTouchUpInside];
-        [self addSubview:_centimeterButton];
+        [self.backgroundImageView addSubview:_centimeterButton];
         [_centimeterButton mas_makeConstraints:^(MASConstraintMaker *make) {
             make.centerY.mas_equalTo(self.cattyButton);
             make.left.mas_equalTo(self.cattyButton.mas_right).mas_equalTo(Auto_Width(16));
@@ -257,7 +283,7 @@
         _tiaoButton.titleLabel.font = KFont(15);
         _tiaoButton.tag = 3;
         [_tiaoButton addTarget:self action:@selector(clickGuigeButton:) forControlEvents:UIControlEventTouchUpInside];
-        [self addSubview:_tiaoButton];
+        [self.backgroundImageView addSubview:_tiaoButton];
         [_tiaoButton mas_makeConstraints:^(MASConstraintMaker *make) {
             make.centerY.mas_equalTo(self.centimeterButton);
             make.left.mas_equalTo(self.centimeterButton.mas_right).mas_equalTo(Auto_Width(16));
@@ -274,7 +300,7 @@
         label.text = @"数量:";
         label.textColor = ColorFromRGB(0x666666);
         label.font = KFont(15);
-        [self addSubview:label];
+        [self.backgroundImageView addSubview:label];
         [label mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.mas_equalTo(self.cattyButton.mas_bottom).mas_equalTo(Auto_Width(15));
             make.left.mas_equalTo(Auto_Width(26));
@@ -284,7 +310,7 @@
         _amountLabel.text = @"66";
         _amountLabel.textColor = ColorFromRGB(0x6881FD);
         _amountLabel.font = KFont(15);
-        [self addSubview:_amountLabel];
+        [self.backgroundImageView addSubview:_amountLabel];
         [_amountLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.centerY.mas_equalTo(label);
             make.left.mas_equalTo(label.mas_right).mas_equalTo(Auto_Width(17));
@@ -292,7 +318,7 @@
         
         UIView * lineView = [UIView new];
         lineView.backgroundColor = ColorFromRGB(0xEEEEEE);
-        [self addSubview:lineView];
+        [self.backgroundImageView addSubview:lineView];
         [lineView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.mas_equalTo(self->_amountLabel);
             make.top.mas_equalTo(self->_amountLabel.mas_bottom).mas_equalTo(Auto_Width(5));
@@ -310,7 +336,7 @@
         label.text = @"品牌:";
         label.textColor = ColorFromRGB(0x666666);
         label.font = KFont(15);
-        [self addSubview:label];
+        [self.backgroundImageView addSubview:label];
         [label mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.mas_equalTo(self.amountLabel.mas_bottom).mas_equalTo(Auto_Width(15));
             make.left.mas_equalTo(Auto_Width(26));
@@ -320,7 +346,7 @@
         _titleLabel.text = @"草鱼";
         _titleLabel.textColor = ColorFromRGB(0x6881FD);
         _titleLabel.font = KFont(15);
-        [self addSubview:_titleLabel];
+        [self.backgroundImageView addSubview:_titleLabel];
         [_titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.centerY.mas_equalTo(label);
             make.left.mas_equalTo(label.mas_right).mas_equalTo(Auto_Width(17));
@@ -328,7 +354,7 @@
         
         UIView * lineView = [UIView new];
         lineView.backgroundColor = ColorFromRGB(0xEEEEEE);
-        [self addSubview:lineView];
+        [self.backgroundImageView addSubview:lineView];
         [lineView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.mas_equalTo(self->_titleLabel);
             make.top.mas_equalTo(self->_titleLabel.mas_bottom).mas_equalTo(Auto_Width(5));
@@ -346,7 +372,7 @@
         label.text = @"几号料:";
         label.textColor = ColorFromRGB(0x666666);
         label.font = KFont(15);
-        [self addSubview:label];
+        [self.backgroundImageView addSubview:label];
         [label mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.mas_equalTo(self.titleLabel.mas_bottom).mas_equalTo(Auto_Width(15));
             make.left.mas_equalTo(Auto_Width(26));
@@ -356,7 +382,7 @@
         _whichFodderLabel.text = @"1号网箱";
         _whichFodderLabel.textColor = ColorFromRGB(0x6881FD);
         _whichFodderLabel.font = KFont(15);
-        [self addSubview:_whichFodderLabel];
+        [self.backgroundImageView addSubview:_whichFodderLabel];
         [_whichFodderLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.centerY.mas_equalTo(label);
             make.left.mas_equalTo(label.mas_right).mas_equalTo(Auto_Width(17));
@@ -364,7 +390,7 @@
         
         UIView * lineView = [UIView new];
         lineView.backgroundColor = ColorFromRGB(0xEEEEEE);
-        [self addSubview:lineView];
+        [self.backgroundImageView addSubview:lineView];
         [lineView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.mas_equalTo(self->_whichFodderLabel);
             make.top.mas_equalTo(self->_whichFodderLabel.mas_bottom).mas_equalTo(Auto_Width(5));
@@ -382,7 +408,7 @@
         label.text = @"饲料信息:";
         label.textColor = ColorFromRGB(0x666666);
         label.font = KFont(15);
-        [self addSubview:label];
+        [self.backgroundImageView addSubview:label];
         [label mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.mas_equalTo(self.whichFodderLabel.mas_bottom).mas_equalTo(Auto_Width(15));
             make.left.mas_equalTo(Auto_Width(26));
@@ -392,7 +418,7 @@
         _fodderMegLabel.text = @"1号网箱";
         _fodderMegLabel.textColor = ColorFromRGB(0x6881FD);
         _fodderMegLabel.font = KFont(15);
-        [self addSubview:_fodderMegLabel];
+        [self.backgroundImageView addSubview:_fodderMegLabel];
         [_fodderMegLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.centerY.mas_equalTo(label);
             make.left.mas_equalTo(label.mas_right).mas_equalTo(Auto_Width(17));
@@ -400,7 +426,7 @@
         
         UIView * lineView = [UIView new];
         lineView.backgroundColor = ColorFromRGB(0xEEEEEE);
-        [self addSubview:lineView];
+        [self.backgroundImageView addSubview:lineView];
         [lineView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.mas_equalTo(self->_fodderMegLabel);
             make.top.mas_equalTo(self->_fodderMegLabel.mas_bottom).mas_equalTo(Auto_Width(5));
@@ -418,7 +444,7 @@
         label.text = @"饲料信息:";
         label.textColor = ColorFromRGB(0x666666);
         label.font = KFont(15);
-        [self addSubview:label];
+        [self.backgroundImageView addSubview:label];
         [label mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.mas_equalTo(self.fodderMegLabel.mas_bottom).mas_equalTo(Auto_Width(15));
             make.left.mas_equalTo(Auto_Width(26));
@@ -428,7 +454,7 @@
         _lastTimeLabel.text = @"1号网箱";
         _lastTimeLabel.textColor = ColorFromRGB(0x6881FD);
         _lastTimeLabel.font = KFont(15);
-        [self addSubview:_lastTimeLabel];
+        [self.backgroundImageView addSubview:_lastTimeLabel];
         [_lastTimeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.centerY.mas_equalTo(label);
             make.left.mas_equalTo(label.mas_right).mas_equalTo(Auto_Width(17));
@@ -436,7 +462,7 @@
         
         UIView * lineView = [UIView new];
         lineView.backgroundColor = ColorFromRGB(0xEEEEEE);
-        [self addSubview:lineView];
+        [self.backgroundImageView addSubview:lineView];
         [lineView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.mas_equalTo(self->_lastTimeLabel);
             make.top.mas_equalTo(self->_lastTimeLabel.mas_bottom).mas_equalTo(Auto_Width(5));
@@ -454,7 +480,7 @@
         label.text = @"饲料信息:";
         label.textColor = ColorFromRGB(0x666666);
         label.font = KFont(15);
-        [self addSubview:label];
+        [self.backgroundImageView addSubview:label];
         [label mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.mas_equalTo(self.lastTimeLabel.mas_bottom).mas_equalTo(Auto_Width(15));
             make.left.mas_equalTo(Auto_Width(26));
@@ -464,7 +490,7 @@
         _lastAmountLabel.text = @"1号网箱";
         _lastAmountLabel.textColor = ColorFromRGB(0x6881FD);
         _lastAmountLabel.font = KFont(15);
-        [self addSubview:_lastAmountLabel];
+        [self.backgroundImageView addSubview:_lastAmountLabel];
         [_lastAmountLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.centerY.mas_equalTo(label);
             make.left.mas_equalTo(label.mas_right).mas_equalTo(Auto_Width(17));
@@ -472,7 +498,7 @@
         
         UIView * lineView = [UIView new];
         lineView.backgroundColor = ColorFromRGB(0xEEEEEE);
-        [self addSubview:lineView];
+        [self.backgroundImageView addSubview:lineView];
         [lineView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.mas_equalTo(self->_lastAmountLabel);
             make.top.mas_equalTo(self->_lastAmountLabel.mas_bottom).mas_equalTo(Auto_Width(5));
@@ -491,7 +517,7 @@
         _remarkLabel.text = @"备注 (日志)";
         _remarkLabel.textColor = ColorFromRGB(0x666666);
         _remarkLabel.font = KFont(15);
-        [self addSubview:_remarkLabel];
+        [self.backgroundImageView addSubview:_remarkLabel];
         [_remarkLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.mas_equalTo(self.lastAmountLabel.mas_bottom).mas_equalTo(Auto_Width(15));
             make.left.mas_equalTo(Auto_Width(26));
@@ -508,8 +534,9 @@
         [_sureButton setTitleColor:ColorFromRGB(0xFFFFFF) forState:UIControlStateNormal];
         _sureButton.titleLabel.font = KFont(16);
         _sureButton.backgroundColor = ColorFromRGB(0x6881FD);
+        LayerMakeCorner(_sureButton, Auto_Width(13));
         [_sureButton addTarget:self action:@selector(clickSureButton) forControlEvents:UIControlEventTouchUpInside];
-        [self addSubview:_sureButton];
+        [self.backgroundImageView addSubview:_sureButton];
         [_sureButton mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.right.bottom.mas_equalTo(0);
             make.height.mas_equalTo(Auto_Width(44));
