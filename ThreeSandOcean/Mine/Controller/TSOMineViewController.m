@@ -53,15 +53,13 @@
 {
     UIAlertController * alertC = [UIAlertController alertControllerWithTitle:nil message:@"确认退出登录？" preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction * cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
-        //[alertC dismissViewControllerAnimated:YES completion:nil];
     }];
     UIAlertAction * okAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        [[BaseNetwork shareNetwork] getWithPath:URL_Logout token:TOKEN params:nil success:^(NSURLSessionDataTask *task, NSInteger resultCode, id resultObj) {
+        [[BaseNetwork shareNetwork] getWithPath:URL_Logout token:TOKEN params:@{@"token":TOKEN} success:^(NSURLSessionDataTask *task, NSInteger resultCode, id resultObj) {
             if (resultCode == 0) {
                 [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"token"];
                 [AppDelegate startLoginViewController];
             }else{
-                [AppDelegate startLoginViewController];
                 [self.view showTSOtoast:resultObj[@"message"]];
             }
         } failure:^(NSError *error) {
@@ -210,8 +208,10 @@
         _breedingManagementView = [[TSOMineListView alloc] init];
         _breedingManagementView.leftImageView.image = ImageNamed(@"mine_breedManage");
         _breedingManagementView.middleLabel.text = @"养殖管理";
+        WEAKSELF;
         _breedingManagementView.clickViewBlock = ^{
-            NSLog(@"breedingManagementView");
+            TSOBreedAquaticsViewController * vc = [[TSOBreedAquaticsViewController alloc] init];
+            [BaseNavViewController pushViewController:vc hiddenBottomWhenPush:YES animation:YES fromNavigation:weakSelf.navigationController];
         };
         [self.view addSubview:_breedingManagementView];
         [_breedingManagementView mas_makeConstraints:^(MASConstraintMaker *make) {

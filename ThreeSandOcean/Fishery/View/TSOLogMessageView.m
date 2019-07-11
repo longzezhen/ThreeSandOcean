@@ -136,7 +136,7 @@
         _closeButton = [UIButton buttonWithType:UIButtonTypeCustom];
         [_closeButton setImage:ImageNamed(@"closeButton") forState:UIControlStateNormal];
         [_closeButton addTarget:self action:@selector(clickCloseButton) forControlEvents:UIControlEventTouchUpInside];
-        [self.backgroundImageView addSubview:_closeButton];
+        [self addSubview:_closeButton];
         [_closeButton mas_makeConstraints:^(MASConstraintMaker *make) {
             make.centerX.mas_equalTo(self.backgroundImageView.mas_right);
             make.centerY.mas_equalTo(self.backgroundImageView.mas_top);

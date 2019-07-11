@@ -30,6 +30,7 @@
 #import "HttpUrlHeader.h"
 #import "UIView+Toast.h"
 #import "UIView+category.h"
+#import "iOS-Echarts.h"
 #endif
 
 

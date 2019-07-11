@@ -31,6 +31,12 @@
 		BF09362722C360A4004BC1D5 /* TSOCompleteInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF09362622C360A4004BC1D5 /* TSOCompleteInfoViewController.m */; };
 		BF09A9C0229B96BC00CC3A4E /* BaseNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = BF09A9BF229B96BC00CC3A4E /* BaseNetwork.m */; };
 		BF09A9D9229BF52800CC3A4E /* BaseWKWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF09A9D8229BF52800CC3A4E /* BaseWKWebView.m */; };
+		BF2FAB1322D5D20100760312 /* TSOLabelTextFieldView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF2FAB1222D5D20100760312 /* TSOLabelTextFieldView.m */; };
+		BF2FAB1622D5EB5D00760312 /* TSOFeedCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF2FAB1522D5EB5D00760312 /* TSOFeedCollectionReusableView.m */; };
+		BF2FAB1922D5F10E00760312 /* TSOBucketCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BF2FAB1822D5F10E00760312 /* TSOBucketCollectionViewCell.m */; };
+		BF2FAB1C22D7143100760312 /* TSOFrameCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BF2FAB1B22D7143100760312 /* TSOFrameCollectionViewCell.m */; };
+		BF2FAB1F22D7224300760312 /* TSOStatisticsCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BF2FAB1E22D7224300760312 /* TSOStatisticsCollectionViewCell.m */; };
+		BF2FAB2722D736F000760312 /* TSOSelectDateView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF2FAB2622D736F000760312 /* TSOSelectDateView.m */; };
 		BF4CDC362286D3D800178BB8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BF4CDC352286D3D800178BB8 /* AppDelegate.m */; };
 		BF4CDC3E2286D3DA00178BB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF4CDC3D2286D3DA00178BB8 /* Assets.xcassets */; };
 		BF4CDC442286D3DA00178BB8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BF4CDC432286D3DA00178BB8 /* main.m */; };
@@ -130,6 +136,18 @@
 		BF09A9D6229BF12B00CC3A4E /* HttpUrlHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HttpUrlHeader.h; sourceTree = "<group>"; };
 		BF09A9D7229BF52800CC3A4E /* BaseWKWebView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseWKWebView.h; sourceTree = "<group>"; };
 		BF09A9D8229BF52800CC3A4E /* BaseWKWebView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseWKWebView.m; sourceTree = "<group>"; };
+		BF2FAB1122D5D20100760312 /* TSOLabelTextFieldView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSOLabelTextFieldView.h; sourceTree = "<group>"; };
+		BF2FAB1222D5D20100760312 /* TSOLabelTextFieldView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TSOLabelTextFieldView.m; sourceTree = "<group>"; };
+		BF2FAB1422D5EB5D00760312 /* TSOFeedCollectionReusableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSOFeedCollectionReusableView.h; sourceTree = "<group>"; };
+		BF2FAB1522D5EB5D00760312 /* TSOFeedCollectionReusableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TSOFeedCollectionReusableView.m; sourceTree = "<group>"; };
+		BF2FAB1722D5F10E00760312 /* TSOBucketCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSOBucketCollectionViewCell.h; sourceTree = "<group>"; };
+		BF2FAB1822D5F10E00760312 /* TSOBucketCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TSOBucketCollectionViewCell.m; sourceTree = "<group>"; };
+		BF2FAB1A22D7143100760312 /* TSOFrameCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSOFrameCollectionViewCell.h; sourceTree = "<group>"; };
+		BF2FAB1B22D7143100760312 /* TSOFrameCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TSOFrameCollectionViewCell.m; sourceTree = "<group>"; };
+		BF2FAB1D22D7224300760312 /* TSOStatisticsCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSOStatisticsCollectionViewCell.h; sourceTree = "<group>"; };
+		BF2FAB1E22D7224300760312 /* TSOStatisticsCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TSOStatisticsCollectionViewCell.m; sourceTree = "<group>"; };
+		BF2FAB2522D736F000760312 /* TSOSelectDateView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSOSelectDateView.h; sourceTree = "<group>"; };
+		BF2FAB2622D736F000760312 /* TSOSelectDateView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TSOSelectDateView.m; sourceTree = "<group>"; };
 		BF4CDC312286D3D800178BB8 /* ThreeSandOcean.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThreeSandOcean.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF4CDC342286D3D800178BB8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BF4CDC352286D3D800178BB8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -439,6 +457,18 @@
 		BF023268228D4D070017DAC0 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BF2FAB1122D5D20100760312 /* TSOLabelTextFieldView.h */,
+				BF2FAB1222D5D20100760312 /* TSOLabelTextFieldView.m */,
+				BF2FAB1422D5EB5D00760312 /* TSOFeedCollectionReusableView.h */,
+				BF2FAB1522D5EB5D00760312 /* TSOFeedCollectionReusableView.m */,
+				BF2FAB1722D5F10E00760312 /* TSOBucketCollectionViewCell.h */,
+				BF2FAB1822D5F10E00760312 /* TSOBucketCollectionViewCell.m */,
+				BF2FAB1A22D7143100760312 /* TSOFrameCollectionViewCell.h */,
+				BF2FAB1B22D7143100760312 /* TSOFrameCollectionViewCell.m */,
+				BF2FAB1D22D7224300760312 /* TSOStatisticsCollectionViewCell.h */,
+				BF2FAB1E22D7224300760312 /* TSOStatisticsCollectionViewCell.m */,
+				BF2FAB2522D736F000760312 /* TSOSelectDateView.h */,
+				BF2FAB2622D736F000760312 /* TSOSelectDateView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -794,15 +824,19 @@
 				BFFFF1DF2293FFB400666AD4 /* TSOMonitoringHeaderCollectionReusableView.m in Sources */,
 				BF023287228EB8510017DAC0 /* TSOMoreListView.m in Sources */,
 				BF7B5EB022B7C5370035F337 /* UIView+category.m in Sources */,
+				BF2FAB2722D736F000760312 /* TSOSelectDateView.m in Sources */,
 				BF02325B228D44A30017DAC0 /* TSOMainTabBarController.m in Sources */,
 				BF02324A228BF64F0017DAC0 /* TSOWelcomeView.m in Sources */,
 				BFFFF1DC2293FA5D00666AD4 /* TSOMonitoringCollectionViewCell.m in Sources */,
 				BF023275228D4E050017DAC0 /* TSOBreedAquaticsViewController.m in Sources */,
 				BFFFF2072297D7FF00666AD4 /* TSOLogMessageView.m in Sources */,
 				BF023255228D3E200017DAC0 /* BaseNavViewController.m in Sources */,
+				BF2FAB1622D5EB5D00760312 /* TSOFeedCollectionReusableView.m in Sources */,
 				BFFFF2042296ADB700666AD4 /* TSOEnvironmentManagerViewController.m in Sources */,
 				BF09A9D9229BF52800CC3A4E /* BaseWKWebView.m in Sources */,
 				BFFFF1D62293DBB000666AD4 /* TSOBreedAquaticsCollectionViewCell.m in Sources */,
+				BF2FAB1322D5D20100760312 /* TSOLabelTextFieldView.m in Sources */,
+				BF2FAB1F22D7224300760312 /* TSOStatisticsCollectionViewCell.m in Sources */,
 				BF023252228C3E6D0017DAC0 /* TSOPageControl.m in Sources */,
 				BF74CF4122924F58003B3275 /* TSOPersonInfoViewController.m in Sources */,
 				BF02327B228D4E7D0017DAC0 /* TSOMonitoringViewController.m in Sources */,
@@ -813,7 +847,9 @@
 				BF09362722C360A4004BC1D5 /* TSOCompleteInfoViewController.m in Sources */,
 				BF023281228D752E0017DAC0 /* TSOMineListView.m in Sources */,
 				BF0231DB228911640017DAC0 /* MYTools.m in Sources */,
+				BF2FAB1C22D7143100760312 /* TSOFrameCollectionViewCell.m in Sources */,
 				BF4CDC362286D3D800178BB8 /* AppDelegate.m in Sources */,
+				BF2FAB1922D5F10E00760312 /* TSOBucketCollectionViewCell.m in Sources */,
 				BF023272228D4DB70017DAC0 /* TSOFisheryViewController.m in Sources */,
 				BFFFF1D92293EE6100666AD4 /* TSONetcageDetailViewController.m in Sources */,
 				BF09A9C0229B96BC00CC3A4E /* BaseNetwork.m in Sources */,

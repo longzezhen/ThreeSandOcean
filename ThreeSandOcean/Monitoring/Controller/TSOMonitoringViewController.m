@@ -115,7 +115,7 @@
 {
     if (!_collectionView) {
         UICollectionViewFlowLayout * fl = [[UICollectionViewFlowLayout alloc] init];
-        _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, KScreenWidth, KScreenHeight-KNavBarHeight-KTabBarHeight-49) collectionViewLayout:fl];
+        _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, KScreenWidth, KScreenHeight-KNavBarHeight-KTabBarHeight) collectionViewLayout:fl];
         _collectionView.dataSource = self;
         _collectionView.delegate = self;
         _collectionView.backgroundColor = ColorFromRGB(0xFFFFFF);

@@ -25,7 +25,7 @@
 #pragma mark - lifeCycle
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.viewControllers = @[self.fisheryNav,self.breedAquaticsNav,self.feedNav,self.monitoringNav,self.mineNav];
+    self.viewControllers = @[self.fisheryNav,self.feedNav,self.monitoringNav,self.mineNav];
 }
 
 #pragma mark - private
@@ -61,22 +61,22 @@
     return _fisheryNav;
 }
 
--(BaseNavViewController *)breedAquaticsNav
-{
-    if (!_breedAquaticsNav) {
-        TSOBreedAquaticsViewController * vc = [[TSOBreedAquaticsViewController alloc] init];
-        [self setItemWithVC:vc title:@"养殖" normalImage:@"icon_star_normal" selectedImage:@"icon_star_checked" idx:2];
-        
-        _breedAquaticsNav = [[BaseNavViewController alloc] initWithRootViewController:vc];
-    }
-    return _breedAquaticsNav;
-}
+//-(BaseNavViewController *)breedAquaticsNav
+//{
+//    if (!_breedAquaticsNav) {
+//        TSOBreedAquaticsViewController * vc = [[TSOBreedAquaticsViewController alloc] init];
+//        [self setItemWithVC:vc title:@"养殖" normalImage:@"icon_star_normal" selectedImage:@"icon_star_checked" idx:2];
+//
+//        _breedAquaticsNav = [[BaseNavViewController alloc] initWithRootViewController:vc];
+//    }
+//    return _breedAquaticsNav;
+//}
 
 -(BaseNavViewController *)feedNav
 {
     if (!_feedNav) {
         TSOFeedViewController * vc = [[TSOFeedViewController alloc] init];
-        [self setItemWithVC:vc title:@"喂食" normalImage:@"icon_star_normal" selectedImage:@"icon_star_checked" idx:3];
+        [self setItemWithVC:vc title:@"抓鱼" normalImage:@"icon_star_normal" selectedImage:@"icon_star_checked" idx:2];
         
         _feedNav = [[BaseNavViewController alloc] initWithRootViewController:vc];
     }
@@ -87,7 +87,7 @@
 {
     if (!_monitoringNav) {
         TSOMonitoringViewController * vc = [[TSOMonitoringViewController alloc] init];
-        [self setItemWithVC:vc title:@"监控" normalImage:@"icon_star_normal" selectedImage:@"icon_star_checked" idx:4];
+        [self setItemWithVC:vc title:@"监控" normalImage:@"icon_star_normal" selectedImage:@"icon_star_checked" idx:3];
         
         _monitoringNav = [[BaseNavViewController alloc] initWithRootViewController:vc];
     }
@@ -98,7 +98,7 @@
 {
     if (!_mineNav) {
         TSOMineViewController * vc = [[TSOMineViewController alloc] init];
-        [self setItemWithVC:vc title:@"我的" normalImage:@"icon_star_normal" selectedImage:@"icon_star_checked" idx:5];
+        [self setItemWithVC:vc title:@"我的" normalImage:@"icon_star_normal" selectedImage:@"icon_star_checked" idx:4];
         
         _mineNav = [[BaseNavViewController alloc] initWithRootViewController:vc];
     }
